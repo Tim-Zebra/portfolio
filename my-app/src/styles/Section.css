@@ -1,0 +1,196 @@
+section {
+  margin: 50px;
+}
+
+/* Section: About */
+#aboutSection {
+  margin-bottom: 100px;
+}
+
+#aboutAside {
+
+}
+
+#aboutHeading {
+  position:fixed;
+  left: 100px;
+  top: 200px;
+}
+
+#aboutHeader {
+
+}
+
+#aboutProfileImage {
+  width: 400px;
+  height: 300px;
+}
+
+#aboutParagraphs p {
+  width: 600px;
+  font-size: larger;
+}
+
+@media only screen and (max-width: 600px) {
+  #aboutSection {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  #aboutSection {
+    margin-bottom: 50px;
+  }
+}
+
+/* Section: Portfolio and Projects */
+.portfolioSection {
+
+}
+
+#projectSectionTitle {
+}
+
+#projectSection {
+
+}
+
+.projectDiv {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.projectDiv > img {
+  width: 100%;
+  height: 100%;
+  border: black solid 2px;
+  border-style:dashed;
+  transition: 0.5s;
+}
+
+.projectDiv:hover > img {
+  filter:grayscale(100);
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.projectProgramsUsed {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  font-size: 30px;
+  width: 300px;
+  padding: 10px;
+  cursor:default;
+  background-color: rgb(34, 103, 163);
+  border: black 2px solid;
+  color: white;
+  font-style: italic;
+}
+
+.projectDeployedAt {
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  font-size: 40px;
+  width: auto;
+  padding: 10px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  color:black;
+}
+
+.projectDeployedAt:hover {
+transition: 0.5s;
+text-decoration: none;
+filter:hue-rotate(90deg);
+}
+
+.projectGithubLink {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  padding: 5px;
+  height: 100px;
+  width: 150px;
+}
+
+.projectGithubLink > div > a > img {
+  position: relative;
+  left: -20px;
+  top: -20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50px;
+}
+
+.projectGithubLink:hover > div > a > img {
+  transition: 0.5s;
+  filter:invert(50);
+  background-color: coral;
+  border-radius: 20px;
+}
+
+/* reveal and hide features */
+/* .projectDiv img:hover + .hide {
+  display:block;
+} */
+
+/* .hide {
+  display: none;
+} */
+
+/* Contact: Section */
+#contactSection {
+	background: linear-gradient(-45deg, #1760111e, #ffffff40, #389ec45b, #23d53e2f);
+  background-size: 200%;
+	animation: gradient 15s ease infinite;
+  border-radius: 10%;
+  width: 60%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#contact-form {
+  width: 90%;
+}
+
+#contactSubmitBtn {
+  border: black 2px solid;
+}
+
+/* Section: Resume */
+#resumeBlock {
+  margin-bottom: 100px;
+}
+
+.resumeProficiences:hover {
+  cursor: default;
+}
+
+.resumeProficiences:hover > h1 {
+  cursor: default;
+  font-size: 5px;
+}
+
+.resumeProficiences:hover > ul {
+  cursor: default;
+  font-size: 5px;
+}
+
+
+.resumeProficiences {
+  margin-left: 100px;
+}

@@ -1,0 +1,15 @@
+.portContainer {
+  height: 100vh;
+}
+
+/* util: Active Icon */
+.activeIcon:hover {
+  filter:hue-rotate(90deg); 
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.activeIconImage {
+  width: 75px;
+  height: 75px;
+}
