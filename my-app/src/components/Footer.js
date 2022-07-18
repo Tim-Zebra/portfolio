@@ -9,7 +9,7 @@ const iconLinkObj = {
     image: 'images/iconImages/githubIcon.png'
   },
   linkedin: {
-    link: 'https://www.linkedin.com/in/timothy-zalewski-18a8393a/',
+    link: 'https://www.linkedin.com/in/timzalewski/',
     image:'images/iconImages/linkedinIcon.png'
   },
   stackoverflow: {
