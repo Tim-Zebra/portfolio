@@ -35,10 +35,8 @@ export default function About() {
         <p className="col-12">
           What helps keep coding so interesting to me is how the entire process is like putting together a puzzle or playing a strategy game.
           I love doing puzzles, recognizing patterns, and applying unique yet crafted solutions towards a challenge.
-          For more content on who I am,
-          Be sure to check out my <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          and
-          <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
+          For more about me,
+          be sure to check out my <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
           profiles to see where I started, who I am, and how far I have come in such a short amount of time.   
         </p>
       </div>

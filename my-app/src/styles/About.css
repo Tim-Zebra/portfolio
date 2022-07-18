@@ -5,8 +5,7 @@ p {
 }
 
 #aboutSection {
-  border: black 5px dashed;
-  height: 70%;
+  border: black 5px dashed;  
 }
 
 #aboutAside {
@@ -31,10 +30,11 @@ p {
 
 #aboutParagraphs {
   border: darkblue 5px solid;
+  height: 100%;
 }
 
 #aboutParagraphs p {
-  font-size: 30px;
+  font-size: 20px;
   border-left: black 2px dotted;
 }
 
