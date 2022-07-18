@@ -1,4 +1,9 @@
-/* Section: About */
+p {
+  width: 100%;
+  text-align: center;
+  border: green 5px dashed;
+}
+
 #aboutSection {
   border: black 5px dashed;
   height: 70%;
@@ -24,10 +29,24 @@
   height: 60%;
 }
 
+#aboutParagraphs {
+  border: darkblue 5px solid;
+}
+
 #aboutParagraphs p {
-  width: 600px;
-  font-size: larger;
+  font-size: 30px;
   border-left: black 2px dotted;
+}
+
+.sectionParagraphLinks {
+  color: red;
+}
+
+.sectionParagraphLinks:hover{
+  color: red;
+  font-size: x-large;
+  transition: 0.2s;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
