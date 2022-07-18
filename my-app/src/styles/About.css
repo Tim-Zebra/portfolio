@@ -1,43 +1,43 @@
 p {
   width: 100%;
   text-align: center;
-  border: green 5px dashed;
 }
 
 #aboutSection {
-  border: black 5px dashed;  
+
 }
 
 #aboutAside {
-  border: red 5px dotted;
   height: 100%;
 }
 
 #aboutHeading {
   position:fixed;
   /* left: 100px; */
-  top: 200px;
+  top: 240px;
 }
 
 #aboutHeader {
-  border: teal 3px dashed;
+
 }
 
 #aboutProfileImage {
   width: 80%;
   height: 60%;
-  border: green 3px dashed;
   text-align: center;
 }
 
 #aboutParagraphsSection {
-  border: darkblue 5px solid;
   height: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .aboutParagraphs {
   font-size: 20px;
-  border-left: black 2px dotted;
+  border-left: black 3px dotted;
+  margin-bottom: 60px;
+  padding: 40px;
 }
 
 #hello {
@@ -60,6 +60,14 @@ p {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 2000px) {
+  #aboutHeading {
+
+    top: 400px;
+
+  }
+}
+
 @media only screen and (max-width: 992px) {
   #aboutProfileImage {
     display: none;
@@ -67,10 +75,17 @@ p {
   #aboutHeading {
     position:relative;
     top: 0px;
+    font-size: 20px;
   }
   #aboutParagraphs p {
     font-size: 20px;
     border-left: black 2px dotted;
     border-right: black 2px dotted;
   }
+  #hello {
+    font-size: 40px;
+    top:-150px;
+    padding-left: 0;
+  }
+
 }
