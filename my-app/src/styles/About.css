@@ -46,7 +46,7 @@ p {
   transition-delay: 2s;
   transition: 0.5s;
   position:absolute;
-  top:-70px;
+  top:-50px;
 }
 
 .sectionParagraphLinks {
@@ -69,6 +69,10 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
+  #aboutSection {
+    padding-left: 1%;
+  }
+  
   #aboutProfileImage {
     display: none;
   }
@@ -77,14 +81,14 @@ p {
     top: 0px;
     font-size: 20px;
   }
-  #aboutParagraphs p {
+  .aboutParagraphs {
     font-size: 20px;
     border-left: black 2px dotted;
-    border-right: black 2px dotted;
+    padding: 5px;
   }
   #hello {
     font-size: 40px;
-    top:-150px;
+    top:-120px;
     padding-left: 0;
   }
 
