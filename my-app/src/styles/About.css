@@ -30,14 +30,22 @@ p {
   text-align: center;
 }
 
-#aboutParagraphs {
+#aboutParagraphsSection {
   border: darkblue 5px solid;
   height: 100%;
 }
 
-#aboutParagraphs p {
+.aboutParagraphs {
   font-size: 20px;
   border-left: black 2px dotted;
+}
+
+#hello {
+  font-size: 40px;
+  transition-delay: 2s;
+  transition: 0.5s;
+  position:absolute;
+  top:-70px;
 }
 
 .sectionParagraphLinks {
@@ -58,5 +66,10 @@ p {
   #aboutHeading {
     position:relative;
     top: 0px;
+  }
+  #aboutParagraphs p {
+    font-size: 20px;
+    border-left: black 2px dotted;
+    border-right: black 2px dotted;
   }
 }
