@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/About.css'
 
 export default function About() {
+  // Changes the opacity of Hello!
+  const [opacity, setOpacity] = useState(1);
+  const helloStyle = {
+    opacity: opacity,
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('This will run after 1 second!');
+      setOpacity(0);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="aboutSection" className="d-flex row portfolioSection">
       <aside className="col-12 col-lg-4" id="aboutAside">
@@ -13,7 +27,7 @@ export default function About() {
         </div>
       </aside>
       <div id="aboutParagraphsSection" className=' col-12 col-lg-8'>
-        <p className="col-12" id="hello">Hello!!
+        <p className="col-12" id="hello" style={helloStyle}>Hello!!
         </p>
         <p className="col-12 aboutParagraphs">
           My name is Timothy Zalewski. I'm a Full-Stack Web Developer in addition to having my Doctorate of Pharmacy.
