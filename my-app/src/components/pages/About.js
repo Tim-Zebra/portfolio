@@ -3,14 +3,16 @@ import '../../styles/About.css'
 
 export default function About() {
   return (
-    <section id="aboutSection" className="d-flex column justify-content-between portfolioSection">
-      <aside className="col-4" id="aboutAside">
-        <div id="aboutHeading" className="col-lg-4 col-sm-12">
-          <h1 id="aboutHeader" className="text-center mr-5">About Me</h1>
-          <img src="images/profile-photo.png" className="" id="aboutProfileImage" alt="developer"></img>
+    <section id="aboutSection" className="d-flex row portfolioSection">
+      <aside className="col-12 col-lg-4" id="aboutAside">
+        <div id="aboutHeading" className="col-12 col-lg-4">
+          <h1 id="aboutHeader" className="text-center">About Me</h1>
+          <p>
+            <img src="images/profile-photo.png" className="" id="aboutProfileImage" alt="developer"></img>
+          </p>
         </div>
       </aside>
-      <div id="aboutParagraphs" className='col-lg-8 col-sm-12'>
+      <div id="aboutParagraphs" className=' col-12 col-lg-8'>
         <p className="col-12">Hello!!
         </p>
         <p className="col-12">

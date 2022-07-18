@@ -15,17 +15,19 @@ p {
 
 #aboutHeading {
   position:fixed;
-  left: 100px;
+  /* left: 100px; */
   top: 200px;
 }
 
 #aboutHeader {
-
+  border: teal 3px dashed;
 }
 
 #aboutProfileImage {
   width: 80%;
   height: 60%;
+  border: green 3px dashed;
+  text-align: center;
 }
 
 #aboutParagraphs {
@@ -49,14 +51,12 @@ p {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
-  #aboutSection {
-    margin-bottom: 50px;
+@media only screen and (max-width: 992px) {
+  #aboutProfileImage {
+    display: none;
   }
-}
-
-@media only screen and (max-height: 600px) {
-  #aboutSection {
-    margin-bottom: 50px;
+  #aboutHeading {
+    position:relative;
+    top: 0px;
   }
 }
