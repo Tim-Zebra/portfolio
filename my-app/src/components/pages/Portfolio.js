@@ -37,6 +37,7 @@ export default function Portfolio() {
   const handleSelection = (isSelected, name, projectNum) => {
     setFirstLanding(false);
     updateAllStates(projectNum);
+    console.log('This happened', projectInfo);
 
     // // Reads status for testing purposes
     // let newArray = projectSelectionArray;
@@ -58,6 +59,7 @@ export default function Portfolio() {
       setIsSelectedProject5(false);
       setIsSelectedProject6(false);
     } else if (projectNum === 2) {
+      setProjectInfo(2);
       setIsSelectedProject1(false);
       setIsSelectedProject2(true);
       setIsSelectedProject3(false);
@@ -65,6 +67,7 @@ export default function Portfolio() {
       setIsSelectedProject5(false);
       setIsSelectedProject6(false);
     } else if (projectNum === 3) {
+      setProjectInfo(3);
       setIsSelectedProject1(false);
       setIsSelectedProject2(false);
       setIsSelectedProject3(true);
@@ -72,6 +75,7 @@ export default function Portfolio() {
       setIsSelectedProject5(false);
       setIsSelectedProject6(false);
     } else if (projectNum === 4) {
+      setProjectInfo(4);
       setIsSelectedProject1(false);
       setIsSelectedProject2(false);
       setIsSelectedProject3(false);
@@ -79,6 +83,7 @@ export default function Portfolio() {
       setIsSelectedProject5(false);
       setIsSelectedProject6(false);
     } else if (projectNum === 5) {
+      setProjectInfo(5);
       setIsSelectedProject1(false);
       setIsSelectedProject2(false);
       setIsSelectedProject3(false);
@@ -86,6 +91,7 @@ export default function Portfolio() {
       setIsSelectedProject5(true);
       setIsSelectedProject6(false);
     } else if (projectNum === 6) {
+      setProjectInfo(6);
       setIsSelectedProject1(false);
       setIsSelectedProject2(false);
       setIsSelectedProject3(false);
@@ -114,22 +120,22 @@ export default function Portfolio() {
         <Project projectNum={6} currentProject={projectObj.project6} selectedStatus={isSelectedProject6} handleSelection={handleSelection} firstLanding={firstLanding}/>
       </div>
       {projectInfo === 1 &&
-        <ProjectAbout currentProject={projectObj.project1} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project1} handleReset={handleReset}/>
       }
       {projectInfo === 2 &&
-        <ProjectAbout currentProject={projectObj.project2} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project2} handleReset={handleReset}/>
       }
       {projectInfo === 3 &&
-        <ProjectAbout currentProject={projectObj.project3} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project3} handleReset={handleReset}/>
       }
       {projectInfo === 4 &&
-        <ProjectAbout currentProject={projectObj.project4} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project4} handleReset={handleReset}/>
       }
       {projectInfo === 5 &&
-        <ProjectAbout currentProject={projectObj.project5} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project5} handleReset={handleReset}/>
       }
       {projectInfo === 6 &&
-        <ProjectAbout currentProject={projectObj.project6} handleReset={handleReset()}/>
+        <ProjectAbout currentProject={projectObj.project6} handleReset={handleReset}/>
       }
     </section>
   );
