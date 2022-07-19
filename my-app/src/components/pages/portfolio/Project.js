@@ -55,7 +55,6 @@ export default function Project({projectNum, currentProject, selectedStatus, han
             &#10060;
           </button>
           <img 
-          onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
           src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
         </div>
       </div>
