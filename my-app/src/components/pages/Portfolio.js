@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import Project from './portfolio/Project'
+import Project from './portfolio/Project';
+import ProjectAbout from './portfolio/ProjectAbout';
 import '../../styles/Portfolio.css'
 import { projectObj } from './portfolio/projectInfo';
 
 // Specified project values are passed to the Project component
 export default function Portfolio() {
+  // Project info to display
+  const [projectInfo, setProjectInfo] = useState(null);
   // Allows images to display without selection
   const [firstLanding, setFirstLanding] = useState(true);
   // Sets props to display the currently selected project
@@ -109,6 +112,9 @@ export default function Portfolio() {
         <Project projectNum={5} currentProject={projectObj.project5} selectedStatus={isSelectedProject5} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
         <Project projectNum={6} currentProject={projectObj.project6} selectedStatus={isSelectedProject6} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
       </div>
+      {projectInfo !== null &&
+
+      }
     </section>
   );
 }
