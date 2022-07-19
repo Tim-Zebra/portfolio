@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import IconCreator from '../../../utils/IconCreator'
 import "../../../styles/Project.css"
 
-export default function Project({projectNum, currentProject, selectedStatus, handleSelection, firstLanding}) {
+export default function Project({projectNum, currentProject, selectedStatus, handleSelection, handleReset, firstLanding}) {
   // Translates currentProject object to IconCreator expectations
   const iconLinkObj= {
     link: currentProject.github,
@@ -49,6 +49,9 @@ export default function Project({projectNum, currentProject, selectedStatus, han
           <div className="projectGithubLink">
             <IconCreator activeIconObj={iconLinkObj}/>
           </div>
+          <button className="ml-2" id="exitButton"
+          onClick={() => handleReset}
+          >&#10060;</button>
           <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
         </div>
       </div>

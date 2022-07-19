@@ -32,6 +32,30 @@
 
 }
 
+/* Search Box - Exit button */
+#exitButton {
+  background-color: transparent;
+  border-radius: 10%;
+  border-style: solid;
+  border-color: rgb(243, 243, 243);
+  outline: none;
+  transition: 0.2s;
+}
+
+#exitButton:hover {
+  transform: rotate(90deg);
+  transition: .4s;
+  border-color: transparent;
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+#exitButton:active {
+  transition: .1s;
+  border-color: transparent;
+  box-shadow: 0px 0px 10px red;
+}
+
 @media only screen and (min-width: 2000px) {
 
 }
