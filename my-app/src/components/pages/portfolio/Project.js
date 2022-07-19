@@ -2,20 +2,41 @@ import React, {useState} from 'react';
 import IconCreator from '../../../utils/IconCreator'
 import "../../../styles/Project.css"
 
-export default function Project({currentProject, selectedStatus, handleSelection}) {
-// Translates currentProject object to IconCreator expectations
-const iconLinkObj= {
-  link: currentProject.github,
-  image: 'images/iconImages/githubIcon.png'
-}
+export default function Project({projectNum, currentProject, selectedStatus, handleSelection, firstLanding}) {
+  // Translates currentProject object to IconCreator expectations
+  const iconLinkObj= {
+    link: currentProject.github,
+    image: 'images/iconImages/githubIcon.png'
+  }
+
+  const isFirstLandingStyle = {
+    filter: 'grayscale(0)',
+  }
+
+  const isNotSelectedStyle = {
+    filter: 'grayscale(100)',
+  }
+
+  const isSelectedStyle = {
+    filter: 'grayscale(0)',
+  }
+
 
 // Mouse enter effects
   const [isSelected, setIsSelected] = useState(selectedStatus);
   
   return (
     <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
-    onClick={() =>  handleSelection(true, currentProject.title)}>
-        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage"></img>
+    onClick={() =>  handleSelection(true, currentProject.title, projectNum)}>
+      {!selectedStatus && firstLanding &&
+        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isFirstLandingStyle}></img>
+      }
+      {!selectedStatus && !firstLanding &&
+        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}></img>
+      }
+      {selectedStatus && !firstLanding &&
+        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
+      }
       {/* <div class="projectContent d-flex">
         {isShown &&
           <div className="projectProgramsUsed text-center">{currentProject.prgms}</div>

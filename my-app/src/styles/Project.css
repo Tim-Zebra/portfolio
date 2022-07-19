@@ -9,6 +9,7 @@
 #backgroundImage {
   border: blue 4px dotted;
   width: 100%; 
+  
 }
 
 #backgroundImage:hover {
