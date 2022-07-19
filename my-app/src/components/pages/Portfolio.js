@@ -37,7 +37,6 @@ export default function Portfolio() {
   const handleSelection = (isSelected, name, projectNum) => {
     setFirstLanding(false);
     updateAllStates(projectNum);
-    console.log('This happened', projectInfo);
 
     // // Reads status for testing purposes
     // let newArray = projectSelectionArray;

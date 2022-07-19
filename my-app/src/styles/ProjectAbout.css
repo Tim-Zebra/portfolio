@@ -1,0 +1,48 @@
+#projectInfo {
+  width: 100%;
+  border: red 3px solid;
+}
+
+/* Header */
+#heading {
+  width:100%;
+  border: green 2px dotted;
+}
+
+#titleHeading {
+  font-size: 100px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/* Search Box - Exit button */
+#exitButton {
+  position: relative;
+  left: 95%;
+  bottom: 60%;
+  font-size: 40px;
+  background-color: transparent;
+  border-radius: 10%;
+  border-style: solid;
+  border-color: transparent;
+  outline: none;
+  transition: 0.2s;
+}
+
+#exitButton:hover {
+  transform: rotate(90deg);
+  transition: .4s;
+  border-color: transparent;
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+#exitButton:active {
+  transition: .1s;
+  border-color: transparent;
+  box-shadow: 0px 0px 10px red;
+}
+
+/* Content */
+#aboutContent {
+  border: green dotted 3px;
+}

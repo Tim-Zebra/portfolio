@@ -17,7 +17,6 @@ export default function Project({projectNum, currentProject, selectedStatus, han
   const isNotSelectedStyle = {
     transition: '0.5s',
     filter: 'grayscale(100)',
-    cursor: 'default',
   }
 
   const isSelectedStyle = {
@@ -31,14 +30,20 @@ export default function Project({projectNum, currentProject, selectedStatus, han
     return (
       <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
       onClick={() =>  handleSelection(true, currentProject.title, projectNum)}>
-        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isFirstLandingStyle}></img>
+        <img 
+        onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
+        src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isFirstLandingStyle}
+        />
       </div>
     );
   } else if (!selectedStatus && !firstLanding) {
     return (
       <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
       >
-        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}></img>
+        <img 
+        onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
+        src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}
+        />
       </div>
     );
   } else if (selectedStatus && !firstLanding) {

@@ -9,22 +9,28 @@ export default function ProjectAbout({currentProject, handleReset}) {
   }
 
   return(
-    <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
-    >
-      <div className="projectContent d-flex">
-        <div className="projectProgramsUsed text-center">{currentProject.prgms}</div>
-        <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
-        <div className="projectGithubLink">
-          <IconCreator activeIconObj={iconLinkObj}/>
+      <div className="d-flex row" id="projectInfo">
+        <div className='' id='heading'>
+          <h1 className="text-center" id="titleHeading">{currentProject.title}</h1>
+          <button className="ml-2" id="exitButton"
+          onClick={() =>  handleReset()}
+          >
+            &#10060;
+          </button>
         </div>
-        <button className="ml-2" id="exitButton"
-        onClick={() =>  handleReset()}
-        >
-          &#10060;
-        </button>
-        <img 
-        src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage"></img>
+
+
+        <div className="" id='aboutContent'>
+          <div className="text-center">{currentProject.prgms}</div>
+          {currentProject.deployed !== false &&
+            <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
+          }
+          <div className="projectGithubLink">
+            <IconCreator activeIconObj={iconLinkObj}/>
+          </div>
+
+        </div>
+
       </div>
-    </div>
   )
 }
