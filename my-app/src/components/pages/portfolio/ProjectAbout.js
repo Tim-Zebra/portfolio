@@ -1,15 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import IconCreator from '../../../utils/IconCreator'
 import "../../../styles/ProjectAbout.css"
 
 export default function ProjectAbout({currentProject, handleReset}) {
+  const [infoOpacity, setInfoOpacity] = useState(0);
+  const [createdOpacity, setCreatedOpacity] = useState(0);
+  
   const iconLinkObj= {
     link: currentProject.github,
     image: 'images/iconImages/githubIcon.png'
   }
 
+  const projectInfoStyle = {
+    opacity: infoOpacity,
+  }
+
+  const createdUsingStyle = {
+    opacity: createdOpacity,
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCreatedOpacity(1);
+      setInfoOpacity(1);
+    }, 1);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCreatedOpacity(0);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return(
-      <div className="d-flex row" id="projectInfo">
+      <div className="d-flex row" id="projectInfo" style={projectInfoStyle}>
         <div className='' id='heading'>
           <h1 className="text-center" id="titleHeading">{currentProject.title}</h1>
           <button className="ml-2" id="exitButton"
@@ -21,7 +47,7 @@ export default function ProjectAbout({currentProject, handleReset}) {
 
 
         <div className="" id='aboutContent'>
-          <p id="createdUsing">
+          <p id="createdUsing" style={createdUsingStyle}>
           Created by Using: 
           </p>
           <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>

@@ -1,6 +1,7 @@
 #projectInfo {
   width: 100%;
   border: red 3px solid;
+  transition: 0.5s;
 }
 
 /* Header */
@@ -52,8 +53,9 @@
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  right: 30%;
+  right: 40%;
   bottom: 26%;
+  transition: 0.5s;
 }
 
 #createdUsingTextBox{

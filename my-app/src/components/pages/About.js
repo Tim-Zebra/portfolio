@@ -29,9 +29,9 @@ export default function About() {
     borderColor: paragraph4,
   }
 
+  // Fade effect of the greeting after 1 second
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 1 second!');
       setOpacity(0);
     }, 1000);
     return () => clearTimeout(timer);
