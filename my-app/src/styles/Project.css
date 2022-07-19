@@ -11,6 +11,10 @@
   width: 100%; 
 }
 
+#backgroundImage:hover {
+  cursor: pointer;
+}
+
 .projectContent {
 
 }
