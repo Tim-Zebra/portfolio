@@ -62,9 +62,10 @@ p {
 
 @media only screen and (min-width: 2000px) {
   #aboutHeading {
-
     top: 400px;
-
+  }
+  .aboutParagraphs {
+    margin-bottom: 45px;
   }
 }
 
