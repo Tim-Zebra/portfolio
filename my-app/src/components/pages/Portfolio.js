@@ -30,6 +30,7 @@ export default function Portfolio() {
   const handleReset = () => {
     updateAllStates(0);
     setFirstLanding(true);
+    setProjectInfo(null);
   }
 
   // handles the change in selection
@@ -49,6 +50,7 @@ export default function Portfolio() {
   const updateAllStates = (projectNum) => {
     // if statements to set statuses
     if (projectNum === 1) {
+      setProjectInfo(1);
       setIsSelectedProject1(true);
       setIsSelectedProject2(false);
       setIsSelectedProject3(false);
@@ -99,7 +101,6 @@ export default function Portfolio() {
       setIsSelectedProject6(false);
     }
   }
-
 
   return (
     <section className="portfolioSection">
