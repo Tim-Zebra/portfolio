@@ -96,5 +96,7 @@ p {
     top:-120px;
     padding-left: 0;
   }
-
+  .sectionParagraphLinks:focus{
+    font-size:20px;
+  }
 }
