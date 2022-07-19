@@ -25,14 +25,8 @@ export default function Portfolio() {
   ]
 
   const handleReset = () => {
+    updateAllStates(0);
     setFirstLanding(true);
-    console.log('handle reset');
-    setIsSelectedProject1(false);
-    setIsSelectedProject2(false);
-    setIsSelectedProject3(false);
-    setIsSelectedProject4(false);
-    setIsSelectedProject5(false);
-    setIsSelectedProject6(false);
   }
 
   // handles the change in selection
@@ -93,6 +87,13 @@ export default function Portfolio() {
       setIsSelectedProject4(false);
       setIsSelectedProject5(false);
       setIsSelectedProject6(true);
+    } else {
+      setIsSelectedProject1(false);
+      setIsSelectedProject2(false);
+      setIsSelectedProject3(false);
+      setIsSelectedProject4(false);
+      setIsSelectedProject5(false);
+      setIsSelectedProject6(false);
     }
   }
 
