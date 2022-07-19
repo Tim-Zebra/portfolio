@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import IconCreator from '../../../utils/IconCreator'
+import "../../../styles/Project.css"
 
 export default function Project({currentProject}) {
 // Translates currentProject object to IconCreator expectations

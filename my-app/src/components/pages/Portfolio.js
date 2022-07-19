@@ -1,50 +1,52 @@
 import React from 'react';
 import Project from './portfolio/Project'
+import '../../styles/Portfolio.css'
 
 // Object of all projects
 const projectObj = {
   project1: {
-    title: 'Regex Tutorial',  
-    github: 'https://github.com/Tim-Zebra/Regex-Tutorial',
-    deployed: 'https://gist.github.com/Tim-Zebra/3670f5235b2fcdd5dbf85251d1f9db89',
-    prgms: 'Gist, Regex',
-    image: 'images/projectImages/regex.png',
+    title: 'Karmatic',  
+    github: 'https://github.com/Tim-Zebra/Karmatic',
+    deployed: 'https://serene-tor-70368.herokuapp.com/',
+    prgms: 'React, MongoDB, Apollo/GraphQL',
+    image: 'images/projectImages/karmatic.png',
   },  
   project2: {
-    title: 'Tech Blog',  
-    github: 'https://github.com/Tim-Zebra/Tech-Blog',
+    title: 'Clinical Platform',  
+    github: 'https://github.com/Tim-Zebra/Clinical-Platform-Streamlined',
     deployed: 'https://timzebratechblog.herokuapp.com/',
-    prgms: 'MVC, express, JawsDB',
+    prgms: 'handlebars',
     image: 'images/projectImages/techBlog.png',
   },
   project3: {
-    title: 'Social Network',  
-    github: 'https://github.com/Tim-Zebra/Social-Network',
-    deployed: false,
-    prgms: 'NoSQL: MongoDB, Mongoose',
-    image: 'images/projectImages/socialNetwork.png',
-  },
-  project4: {
-    title: 'e-Commerce Data Server',  
-    github: 'https://github.com/Tim-Zebra/eCommerce-Data-Server',
-    deployed: false,
-    prgms: 'SQL, Sequelize',
-    image: 'images/projectImages/eCommerce.png',
-  },
-  project5: {
-    title: 'Team Builder',  
-    github: 'https://github.com/Tim-Zebra/Team-Builder',
-    deployed: false,
-    prgms: 'Node, Jest',
-    image: 'images/projectImages/teamBuilder.gif',
-  },
-    project6: {
     title: 'Love/Compatability Finder',  
     github: 'https://github.com/Tim-Zebra/Compatible-or-Not_Find-true-love-here.',
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
     prgms: 'APIs, HTML, CSS, JS, Collaboration',
     image: 'images/projectImages/compatibility.gif',
   },
+  project4: {
+    title: 'Team Builder',  
+    github: 'https://github.com/Tim-Zebra/Team-Builder',
+    deployed: false,
+    prgms: 'Node, Jest',
+    image: 'images/projectImages/teamBuilder.gif',
+},
+  project5: {
+    title: 'Badge Maker',  
+    github: 'https://github.com/Tim-Zebra/C-Sharp-CatWorx',
+    deployed: false,
+    prgms: 'C#',
+    image: 'images/projectImages/eCommerce.png',
+  },
+  project6: {
+    title: 'News Feed',  
+    github: 'https://github.com/Tim-Zebra/python-newsfeed',
+    deployed: 'https://python-newsfeed-timzebra.herokuapp.com/',
+    prgms: 'Python, MongoDB',
+    image: 'images/projectImages/python-news-feed.png',
+  },
+
 }
 
 // Specified project values are passed to the Project component
