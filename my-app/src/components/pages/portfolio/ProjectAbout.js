@@ -21,7 +21,10 @@ export default function ProjectAbout({currentProject, handleReset}) {
 
 
         <div className="" id='aboutContent'>
-          <div className="text-center">{currentProject.prgms}</div>
+          <p id="createdUsing">
+          Created by Using: 
+          </p>
+          <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>
           {currentProject.deployed !== false &&
             <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
           }

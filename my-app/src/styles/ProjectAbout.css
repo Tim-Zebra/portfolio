@@ -45,4 +45,20 @@
 /* Content */
 #aboutContent {
   border: green dotted 3px;
+  width: 100%;
+}
+
+#createdUsing {
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  right: 30%;
+  bottom: 26%;
+}
+
+#createdUsingTextBox{
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  bottom: 60%;
 }
