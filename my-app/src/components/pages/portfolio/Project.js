@@ -10,10 +10,12 @@ export default function Project({projectNum, currentProject, selectedStatus, han
   }
 
   const isFirstLandingStyle = {
+    transition: '0.5s',
     filter: 'grayscale(0)',
   }
 
   const isNotSelectedStyle = {
+    transition: '0.5s',
     filter: 'grayscale(100)',
     cursor: 'default',
   }
@@ -43,16 +45,9 @@ export default function Project({projectNum, currentProject, selectedStatus, han
     return (
       <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
       >
-        <div className="projectContent d-flex">
-          <div className="projectProgramsUsed text-center">{currentProject.prgms}</div>
-          {/* <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a> */}
-          <div className="projectGithubLink">
-            <IconCreator activeIconObj={iconLinkObj}/>
-          </div>
-
-          <img 
-          src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
-        </div>
+        <img 
+        src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}
+        />
       </div>
     );
   }
