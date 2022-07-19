@@ -51,13 +51,22 @@ export default function ProjectAbout({currentProject, handleReset}) {
           Created by Using: 
           </p>
           <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>
-          {currentProject.deployed !== false &&
-            <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
-          }
-          <div className="projectGithubLink">
-            <IconCreator activeIconObj={iconLinkObj}/>
+          <p>
+            {currentProject.about}
+          </p>
+          <div className="d-flex justify-content-around" id="aboutFooter">
+            {currentProject.deployed !== false &&
+              <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
+            }
+            {currentProject.deployed === false &&
+              <span>
+                Chose not to deployed, but you can check out the project on GitHub!
+              </span>
+            }
+            <div className="projectGithubLink">
+              <IconCreator activeIconObj={iconLinkObj}/>
+            </div>
           </div>
-
         </div>
 
       </div>

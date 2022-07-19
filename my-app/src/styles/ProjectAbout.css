@@ -62,5 +62,10 @@
   font-size: 50px;
   font-family: 'Courier New', Courier, monospace;
   position: relative;
-  bottom: 60%;
+  bottom: 55%;
+}
+
+/* Footer */
+#aboutFooter {
+  width: 100%;
 }
