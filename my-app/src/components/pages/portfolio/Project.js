@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import IconCreator from '../../../utils/IconCreator'
 import "../../../styles/Project.css"
 
-export default function Project({currentProject, selectedStatus}) {
+export default function Project({currentProject, selectedStatus, handleSelection}) {
 // Translates currentProject object to IconCreator expectations
 const iconLinkObj= {
   link: currentProject.github,
@@ -14,8 +14,8 @@ const iconLinkObj= {
   
   return (
     <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
-    onMouseEnter={() => setIsSelected(false)}
-    onMouseLeave={() => setIsSelected(false)}>
+    onMouseEnter={() =>  handleSelection(true, currentProject.title)}
+    onMouseLeave={() => handleSelection(false, currentProject.title)}>
         <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage"></img>
       {/* <div class="projectContent d-flex">
         {isShown &&
