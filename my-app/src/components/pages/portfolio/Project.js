@@ -29,27 +29,24 @@ export default function Project({projectNum, currentProject, selectedStatus, han
     <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
     onClick={() =>  handleSelection(true, currentProject.title, projectNum)}>
       {!selectedStatus && firstLanding &&
+
         <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isFirstLandingStyle}></img>
+
       }
       {!selectedStatus && !firstLanding &&
         <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}></img>
       }
       {selectedStatus && !firstLanding &&
-        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
-      }
-      {/* <div class="projectContent d-flex">
-        {isShown &&
+        <div class="projectContent d-flex">
           <div className="projectProgramsUsed text-center">{currentProject.prgms}</div>
-        }
-        {isShown && currentProject.deployed !== false &&
           <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
-        }
-        {isShown &&
           <div className="projectGithubLink">
             <IconCreator activeIconObj={iconLinkObj}/>
           </div>
-        }
-      </div> */}
+          <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}></img>
+        </div>
+      }
+
     </div>
   );
 }
