@@ -56,7 +56,7 @@ export default function ProjectAbout({currentProject, handleReset}) {
           </p>
           <div className="d-flex justify-content-around" id="aboutFooter">
             {currentProject.deployed !== false &&
-              <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Deployed @</a>
+              <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Check it Out!</a>
             }
             {currentProject.deployed === false &&
               <span>
