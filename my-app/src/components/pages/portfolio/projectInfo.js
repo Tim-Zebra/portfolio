@@ -6,7 +6,7 @@ export const projectObj = {
     deployed: 'https://serene-tor-70368.herokuapp.com/',
     prgms: 'React, MongoDB, Apollo/GraphQL',
     image: 'images/projectImages/karmatic.png',
-    about: ''
+    about: 'This was a really cool project and just test code'
   },  
   project2: {
     title: 'Clinical Platform',  

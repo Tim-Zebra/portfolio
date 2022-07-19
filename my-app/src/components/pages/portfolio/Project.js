@@ -14,10 +14,9 @@ const iconLinkObj= {
   
   return (
     <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
-    onMouseEnter={() => setIsShown(true)}
+    onMouseEnter={() => setIsShown(false)}
     onMouseLeave={() => setIsShown(false)}>
-      <img src={currentProject.image} alt="project screen shot" className="projectBackground">
-      </img>
+        <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage"></img>
       <div class="projectContent d-flex">
         {isShown &&
           <div className="projectProgramsUsed text-center">{currentProject.prgms}</div>
