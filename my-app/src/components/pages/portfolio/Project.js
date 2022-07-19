@@ -15,6 +15,7 @@ export default function Project({projectNum, currentProject, selectedStatus, han
 
   const isNotSelectedStyle = {
     filter: 'grayscale(100)',
+    display: 'none',
   }
 
   const isSelectedStyle = {
@@ -34,7 +35,7 @@ export default function Project({projectNum, currentProject, selectedStatus, han
   } else if (!selectedStatus && !firstLanding) {
     return (
       <div className='d-flex col-12 col-lg-5 col-xl-4 my-3 projectDiv'
-      onClick={() =>  handleSelection(true, currentProject.title, projectNum)}>
+      >
         <img src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}></img>
       </div>
     );
