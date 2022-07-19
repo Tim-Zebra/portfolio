@@ -7,7 +7,7 @@ import { projectObj } from './portfolio/projectInfo';
 // Specified project values are passed to the Project component
 export default function Portfolio() {
   // Project info to display
-  const [projectInfo, setProjectInfo] = useState(null);
+  const [projectInfo, setProjectInfo] = useState(0);
   // Allows images to display without selection
   const [firstLanding, setFirstLanding] = useState(true);
   // Sets props to display the currently selected project
@@ -30,7 +30,7 @@ export default function Portfolio() {
   const handleReset = () => {
     updateAllStates(0);
     setFirstLanding(true);
-    setProjectInfo(null);
+    setProjectInfo(0);
   }
 
   // handles the change in selection
@@ -106,15 +106,30 @@ export default function Portfolio() {
     <section className="portfolioSection">
       <h1 id="projectSectionTitle">Portfolio</h1>
       <div className="d-flex row justify-content-around" id="projectSection">
-        <Project projectNum={1} currentProject={projectObj.project1} selectedStatus={isSelectedProject1} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
-        <Project projectNum={2} currentProject={projectObj.project2} selectedStatus={isSelectedProject2} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
-        <Project projectNum={3} currentProject={projectObj.project3} selectedStatus={isSelectedProject3} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
-        <Project projectNum={4} currentProject={projectObj.project4} selectedStatus={isSelectedProject4} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
-        <Project projectNum={5} currentProject={projectObj.project5} selectedStatus={isSelectedProject5} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
-        <Project projectNum={6} currentProject={projectObj.project6} selectedStatus={isSelectedProject6} handleSelection={handleSelection} handleReset={handleReset} firstLanding={firstLanding}/>
+        <Project projectNum={1} currentProject={projectObj.project1} selectedStatus={isSelectedProject1} handleSelection={handleSelection} firstLanding={firstLanding}/>
+        <Project projectNum={2} currentProject={projectObj.project2} selectedStatus={isSelectedProject2} handleSelection={handleSelection} firstLanding={firstLanding}/>
+        <Project projectNum={3} currentProject={projectObj.project3} selectedStatus={isSelectedProject3} handleSelection={handleSelection} firstLanding={firstLanding}/>
+        <Project projectNum={4} currentProject={projectObj.project4} selectedStatus={isSelectedProject4} handleSelection={handleSelection} firstLanding={firstLanding}/>
+        <Project projectNum={5} currentProject={projectObj.project5} selectedStatus={isSelectedProject5} handleSelection={handleSelection} firstLanding={firstLanding}/>
+        <Project projectNum={6} currentProject={projectObj.project6} selectedStatus={isSelectedProject6} handleSelection={handleSelection} firstLanding={firstLanding}/>
       </div>
-      {projectInfo !== null &&
-
+      {projectInfo === 1 &&
+        <ProjectAbout currentProject={projectObj.project1} handleReset={handleReset()}/>
+      }
+      {projectInfo === 2 &&
+        <ProjectAbout currentProject={projectObj.project2} handleReset={handleReset()}/>
+      }
+      {projectInfo === 3 &&
+        <ProjectAbout currentProject={projectObj.project3} handleReset={handleReset()}/>
+      }
+      {projectInfo === 4 &&
+        <ProjectAbout currentProject={projectObj.project4} handleReset={handleReset()}/>
+      }
+      {projectInfo === 5 &&
+        <ProjectAbout currentProject={projectObj.project5} handleReset={handleReset()}/>
+      }
+      {projectInfo === 6 &&
+        <ProjectAbout currentProject={projectObj.project6} handleReset={handleReset()}/>
       }
     </section>
   );
