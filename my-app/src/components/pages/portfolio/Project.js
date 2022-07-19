@@ -13,7 +13,7 @@ const iconLinkObj= {
   const [isShown, setIsShown] = useState(false);
   
   return (
-    <div className='col-lg-6 col-md-9 col-sm-9 col-9 my-3 projectDiv'
+    <div className='col-12 col-lg-6 col-xl-4 my-3 projectDiv'
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}>
       <img src={currentProject.image} alt="project screen shot" className="projectBackground">

@@ -15,8 +15,8 @@ const projectObj = {
     title: 'Clinical Platform',  
     github: 'https://github.com/Tim-Zebra/Clinical-Platform-Streamlined',
     deployed: 'https://timzebratechblog.herokuapp.com/',
-    prgms: 'handlebars',
-    image: 'images/projectImages/techBlog.png',
+    prgms: 'Express, SQL, Sequelize, handlebars',
+    image: 'images/projectImages/clinicalPlatformStreamLined.png',
   },
   project3: {
     title: 'Love/Compatability Finder',  
@@ -37,7 +37,7 @@ const projectObj = {
     github: 'https://github.com/Tim-Zebra/C-Sharp-CatWorx',
     deployed: false,
     prgms: 'C#',
-    image: 'images/projectImages/eCommerce.png',
+    image: 'images/projectImages/C-Sharp-Badge.png',
   },
   project6: {
     title: 'News Feed',  
