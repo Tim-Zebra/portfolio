@@ -1,5 +1,4 @@
-import React, {useState, useEffect } from 'react';
-import IconCreator from '../../../utils/IconCreator'
+import React, {useState, useEffect,  } from 'react';
 import "../../../styles/ProjectAbout.css"
 
 export default function ProjectAbout({currentProject, handleReset}) {
