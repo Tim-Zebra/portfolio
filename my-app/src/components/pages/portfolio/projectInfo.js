@@ -6,7 +6,7 @@ export const projectObj = {
     deployed: 'https://serene-tor-70368.herokuapp.com/',
     prgms: 'React, MongoDB, Apollo/GraphQL',
     image: 'images/projectImages/karmatic.png',
-    about: 'This was a really cool project and just test code',
+    about: 'Community improvement app designed to bring neighbors together inspired by the concept of karma. Neighbors can ask for help or help out each other with Karma coins as an intermediary pseudo-currency.\n This was by far one of the most fun and exciting projects I got the opportunity to collaborate on with a great bunch of colleagues.',
   },  
   project2: {
     title: 'Clinical Platform',  
@@ -14,7 +14,7 @@ export const projectObj = {
     deployed: 'https://timzebratechblog.herokuapp.com/',
     prgms: 'Express, SQL, Sequelize, handlebars',
     image: 'images/projectImages/clinicalPlatformStreamLined.png',
-    about: 'This was a really cool project and just test code',
+    about: 'Concise and straight forward healthcare portal designed to stream line doctor patient relationship without all distractions found in today’s applications.',
   },
   project3: {
     title: 'Love/Compatability Finder',  
@@ -22,7 +22,7 @@ export const projectObj = {
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
     prgms: 'APIs, HTML, CSS, JS, Collaboration',
     image: 'images/projectImages/compatibility.gif',
-    about: 'This was a really cool project and just test code',
+    about: 'See into your romantic destiny by finding true love based on just two names analyzed by a third-party API. Plus dating tips and advice to help boost your special connection!',
   },
   project4: {
     title: 'Team Builder',  
@@ -30,7 +30,7 @@ export const projectObj = {
     deployed: false,
     prgms: 'Node, Jest',
     image: 'images/projectImages/teamBuilder.gif',
-    about: 'This was a really cool project and just test code',
+    about: 'This team builder is compiled using the Node.js terminal. One of the more interesting features I implemented not only saved the team data, but also automatically opened the data file. This allowed for smooth transition between completing the work and then viewing the final product. \n\n Give it a whirl, and you\'ll get to experience how clean the application feels.',
 },
   project5: {
     title: 'Badge Maker',  
@@ -38,7 +38,7 @@ export const projectObj = {
     deployed: false,
     prgms: 'C#',
     image: 'images/projectImages/C-Sharp-Badge.png',
-    about: 'This was a really cool project and just test code',
+    about: 'This application is designed to take in user input through the command terminal, and then output the information onto employee badges for the pseudo-company CatWorx. \n\n This is my first application using C#, and the tools/instruction were prodvided as a post bootcamp learning opportunity. Really cool and very literal and defined language, which is the main reason I enjoy working with it so much',
   },
   project6: {
     title: 'News Feed',  
@@ -46,6 +46,6 @@ export const projectObj = {
     deployed: 'https://python-newsfeed-timzebra.herokuapp.com/',
     prgms: 'Python, MongoDB',
     image: 'images/projectImages/python-news-feed.png',
-    about: 'This was a really cool project and just test code',
+    about: 'A full-stack social blog web application designed with user login/logout features. Includes posts, weblink (and visual modification), comments, and upvotes. \n\n This is my first application using Python, and the tools/instruction were prodvided as a post bootcamp learning opportunity.',
   },
 }
