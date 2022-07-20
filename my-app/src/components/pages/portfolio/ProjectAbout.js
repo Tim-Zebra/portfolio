@@ -5,11 +5,6 @@ import "../../../styles/ProjectAbout.css"
 export default function ProjectAbout({currentProject, handleReset}) {
   const [infoOpacity, setInfoOpacity] = useState(0);
   const [createdOpacity, setCreatedOpacity] = useState(0);
-  
-  const iconLinkObj= {
-    link: currentProject.github,
-    image: 'images/iconImages/githubIcon.png'
-  }
 
   const projectInfoStyle = {
     opacity: infoOpacity,
@@ -45,30 +40,28 @@ export default function ProjectAbout({currentProject, handleReset}) {
           >
             &#10060;
           </button>
-          <div className='aboutHeaderContent'>
-            <div id="createdUsing" style={createdUsingStyle}>
+            <p id="createdUsing" style={createdUsingStyle}>
             Created by Using: 
-            </div>
+            </p>
             <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>
-          </div>
         </div>
 
         <div className="" id='aboutContent'>
-          <p className="col-8" id="aboutContentParagraph">
+          <p className="text-center" id="aboutContentParagraph">
             {currentProject.about}
           </p>
-          <div className="d-flex justify-content-around" id="aboutFooter">
+          <div className="d-flex justify-content-between" id="aboutFooter">
             {currentProject.deployed !== false &&
               <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Check it Out!</a>
             }
             {currentProject.deployed === false &&
-              <span>
-                Chose not to deployed, but you can check out the project on GitHub!
+              <span className='projectNotDeployed text-center'>
+                Local Project
               </span>
             }
-            <div className="projectGithubLink">
-              <IconCreator activeIconObj={iconLinkObj}/>
-            </div>
+            <a href={currentProject.github} target="_blank" rel="noreferrer" className="projectGitHubLink">
+              GitHub Repo
+            </a>
           </div>
         </div>
 

@@ -1,13 +1,12 @@
 #projectInfo {
   width: 100%;
-  border: red 3px solid;
   transition: 0.5s;
+  cursor: default;
 }
 
 /* Header */
 #heading {
   width:100%;
-  border: green 2px dotted;
 }
 
 #titleHeading {
@@ -40,12 +39,10 @@
 #exitButton:active {
   transition: .1s;
   border-color: transparent;
-  box-shadow: 0px 0px 10px red;
 }
 
 /* Header Content */
 .aboutHeaderContent {
-  border: teal dashed 3px;
   width: 100%;
 }
 
@@ -53,8 +50,8 @@
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  right: 0%;
-  bottom: 26%;
+  top: -10%;
+  right: 40%;
   transition: 0.5s;
 }
 
@@ -62,22 +59,37 @@
   font-size: 50px;
   font-family: 'Courier New', Courier, monospace;
   position: relative;
-  bottom: 55%;
+  bottom: 35%;
 }
 
 /* Content */
 #aboutContent {
-  border: orange dotted 3px;
   width: 100%;
+  position: relative;
+  bottom: 100px;
 }
 
-
-
 #aboutContentParagraph {
-  font-size: 20px;
+  font-size: 35px;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 /* Footer */
 #aboutFooter {
   width: 100%;
+}
+
+.projectDeployedAt {
+  font-size: 40px;
+}
+
+.projectNotDeployed {
+  font-size: 40px;
+}
+
+.projectGitHubLink {
+  font-size: 40px;
+
 }
