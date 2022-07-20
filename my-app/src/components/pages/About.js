@@ -9,6 +9,16 @@ export default function About() {
   const [ paragraph3, setParagraph3 ] = useState('black');
   const [ paragraph4, setParagraph4 ] = useState('black');
 
+  // Logic from Scroill position
+  const handleScroll = () => {
+    const position = window.scrollY;
+    console.log('This happened', position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   const helloStyle = {
     opacity: opacity,
   }
@@ -36,9 +46,6 @@ export default function About() {
     }, 100000);
     return () => clearTimeout(timer);
   }, []);
-
-
-
 
   return (
     <section id="aboutSection" className="d-flex row portfolioSection">

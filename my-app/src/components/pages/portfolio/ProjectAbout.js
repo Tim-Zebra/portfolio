@@ -1,6 +1,7 @@
 import React, {useState, useEffect,  } from 'react';
 import "../../../styles/ProjectAbout.css"
 
+
 export default function ProjectAbout({currentProject, handleReset}) {
   const [infoOpacity, setInfoOpacity] = useState(0);
   const [createdUsingOpacity, setCreatedUsingOpacity] = useState(0);
