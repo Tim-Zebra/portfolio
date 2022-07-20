@@ -10,7 +10,7 @@
 }
 
 #titleHeading {
-  font-size: 100px;
+  font-size: 80px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -51,16 +51,16 @@
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  top: -10%;
-  right: 40%;
-  transition: 0.5s;
+  top: -15%;
+  right: 0%;
+  border-radius: 4%;
 }
 
 #createdUsingTextBox{
-  font-size: 50px;
+  font-size: 45px;
   font-family: 'Courier New', Courier, monospace;
   position: relative;
-  bottom: 35%;
+  bottom: 39%;
 }
 
 /* Content */
@@ -100,7 +100,7 @@
   text-decoration: none;
 }
 
-#projectDeployedAt:active{
+#projectDeployedAt:active {
   transition: 1s;
   font-size: 50px;
   color:black;
@@ -122,7 +122,7 @@
   transition: 0.3s;
 }
 
-#projectNotDeployed:active{
+#projectNotDeployed:active {
   transition: 1s;
   background-color: white;
   color: white;
@@ -137,7 +137,7 @@
   text-decoration: none;
 }
 
-#projectNotDeployed:active + #projectGitHubLink{
+#projectNotDeployed:active + #projectGitHubLink {
   transition: 1s;
   background-color: white;
   color: white;
@@ -174,12 +174,35 @@
   font-size: 50px;
 }
 
+/* Medium/Average Screen Size */
 @media only screen and (max-width: 1200px) {
-#aboutFooter {
-  padding-top: 10%;
-}
+  #heading {
+    width:100%;
+  }
+  
+  #titleHeading {
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+
+  #createdUsing {
+    font-size: 35px;
+    position: relative;
+    top: -50%;
+    right: 35%;
+    transition: 0.5s;
+  }
+  
+  #createdUsingTextBox {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: -45%;
+  }
+
 }
 
+/* Mobile screen size*/
 @media only screen and (max-width: 992px) {
 
 }

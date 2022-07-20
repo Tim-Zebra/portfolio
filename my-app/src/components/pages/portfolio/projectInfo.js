@@ -36,7 +36,7 @@ export const projectObj = {
     title: 'Badge Maker',  
     github: 'https://github.com/Tim-Zebra/C-Sharp-CatWorx',
     deployed: false,
-    prgms: 'C#',
+    prgms: 'C#, .NET',
     image: 'images/projectImages/C-Sharp-Badge.png',
     about: 'This application is designed to take in user input through the command terminal, and then output the information onto employee badges for the pseudo-company CatWorx. \n\n This is my first application using C#, and the tools/instruction were prodvided as a post bootcamp learning opportunity. Really cool and very literal and defined language, which is the main reason I enjoy working with it so much',
   },
