@@ -28,32 +28,32 @@ export default function Project({projectNum, currentProject, selectedStatus, han
   const [isSelected, setIsSelected] = useState(selectedStatus);
   if (!selectedStatus && firstLanding) {
     return (
-      <div className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv'
-      onClick={() =>  handleSelection(true, currentProject.title, projectNum)}>
+      <a className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv' href='#titleHeading'
+      >
         <img 
         onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
         src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isFirstLandingStyle}
         />
-      </div>
+      </a>
     );
   } else if (!selectedStatus && !firstLanding) {
     return (
-      <div className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv'
+      <a className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv' href='#titleHeading'
       >
         <img 
         onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
         src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isNotSelectedStyle}
         />
-      </div>
+      </a>
     );
   } else if (selectedStatus && !firstLanding) {
     return (
-      <div className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv'
+      <a className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv' href='#titleHeading'
       >
         <img 
         src={currentProject.image} alt="project screen shot" className="projectBackground" id="backgroundImage" style={isSelectedStyle}
         />
-      </div>
+      </a>
     );
   }
 }
