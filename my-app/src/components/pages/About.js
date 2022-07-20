@@ -20,7 +20,9 @@ export default function About() {
   };
 
   const changeParagraphBorderMobile = (positionY, screenWidth, screenHeight) => {
+    // Filters for a mobile or hand held display
     if(screenWidth < 450) {
+      // Filters for longer phones like Galaxy S20 Ultra
       if(screenHeight > 677) {
         if(positionY <= 51) {
           setParagraph1('black');
@@ -48,7 +50,9 @@ export default function About() {
           setParagraph3('black');
           setParagraph4('gold');
         }
-      } else {
+      } 
+      // Filters for more standard phones like iPhone SE
+      else {
         if(positionY <= 60) {
           setParagraph1('black');
           setParagraph2('black');
