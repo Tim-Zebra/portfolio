@@ -59,7 +59,7 @@ export default function ProjectAbout({currentProject, handleReset}) {
                 Local Project
               </span>
             }
-            <a href={currentProject.github} target="_blank" rel="noreferrer" className="projectGitHubLink">
+            <a href={currentProject.github} target="_blank" rel="noreferrer" className="projectGitHubLink text-center">
               GitHub Repo
             </a>
           </div>
