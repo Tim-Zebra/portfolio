@@ -6,7 +6,7 @@ export const projectObj = {
     deployed: 'https://serene-tor-70368.herokuapp.com/',
     prgms: 'React, MongoDB, Apollo/GraphQL',
     image: 'images/projectImages/karmatic.png',
-    about: 'This was a really cool project and just test code'
+    about: 'This was a really cool project and just test code',
   },  
   project2: {
     title: 'Clinical Platform',  
@@ -14,6 +14,7 @@ export const projectObj = {
     deployed: 'https://timzebratechblog.herokuapp.com/',
     prgms: 'Express, SQL, Sequelize, handlebars',
     image: 'images/projectImages/clinicalPlatformStreamLined.png',
+    about: 'This was a really cool project and just test code',
   },
   project3: {
     title: 'Love/Compatability Finder',  
@@ -21,6 +22,7 @@ export const projectObj = {
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
     prgms: 'APIs, HTML, CSS, JS, Collaboration',
     image: 'images/projectImages/compatibility.gif',
+    about: 'This was a really cool project and just test code',
   },
   project4: {
     title: 'Team Builder',  
@@ -28,6 +30,7 @@ export const projectObj = {
     deployed: false,
     prgms: 'Node, Jest',
     image: 'images/projectImages/teamBuilder.gif',
+    about: 'This was a really cool project and just test code',
 },
   project5: {
     title: 'Badge Maker',  
@@ -35,6 +38,7 @@ export const projectObj = {
     deployed: false,
     prgms: 'C#',
     image: 'images/projectImages/C-Sharp-Badge.png',
+    about: 'This was a really cool project and just test code',
   },
   project6: {
     title: 'News Feed',  
@@ -42,5 +46,6 @@ export const projectObj = {
     deployed: 'https://python-newsfeed-timzebra.herokuapp.com/',
     prgms: 'Python, MongoDB',
     image: 'images/projectImages/python-news-feed.png',
+    about: 'This was a really cool project and just test code',
   },
 }

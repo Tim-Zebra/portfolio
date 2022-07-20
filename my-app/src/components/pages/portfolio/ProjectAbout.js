@@ -19,6 +19,7 @@ export default function ProjectAbout({currentProject, handleReset}) {
     opacity: createdOpacity,
   }
 
+  // Almost 0 delay timer. Intended to trigger styling effects at start up.
   useEffect(() => {
     const timer = setTimeout(() => {
       setCreatedOpacity(1);
@@ -27,6 +28,7 @@ export default function ProjectAbout({currentProject, handleReset}) {
     return () => clearTimeout(timer);
   }, []);
 
+  // 3 second timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setCreatedOpacity(0);
@@ -44,7 +46,6 @@ export default function ProjectAbout({currentProject, handleReset}) {
             &#10060;
           </button>
         </div>
-
 
         <div className="" id='aboutContent'>
           <p id="createdUsing" style={createdUsingStyle}>
