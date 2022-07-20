@@ -17,6 +17,10 @@ export default function About() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const helloStyle = {
