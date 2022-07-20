@@ -49,22 +49,22 @@ export default function About() {
           setParagraph4('gold');
         }
       } else {
-        if(positionY <= 51) {
+        if(positionY <= 60) {
           setParagraph1('black');
           setParagraph2('black');
           setParagraph3('black');
           setParagraph4('black');
-        } else if(positionY <= 496) {
+        } else if(positionY <= 686) {
           setParagraph1('red');
           setParagraph2('black');
           setParagraph3('black');
           setParagraph4('black');
-        } else if(positionY <= 907) {
+        } else if(positionY <= 1256) {
           setParagraph1('black');
           setParagraph2('deepskyblue');
           setParagraph3('black');
           setParagraph4('black');
-        } else if(positionY <= 1436) {
+        } else if(positionY <= 1628) {
           setParagraph1('black');
           setParagraph2('black');
           setParagraph3('limegreen');
