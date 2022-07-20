@@ -13,39 +13,70 @@ export default function About() {
   const handleScroll = () => {
     const position = window.scrollY;
     const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
     console.log('This happened', position);
-    changeParagraphBorderMobile(position, screenWidth);
+    changeParagraphBorderMobile(position, screenWidth, screenHeight);
 
   };
 
-  const changeParagraphBorderMobile = (positionY, screenWidth) => {
+  const changeParagraphBorderMobile = (positionY, screenWidth, screenHeight) => {
     if(screenWidth < 450) {
-      if(positionY <= 51) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 496) {
-        setParagraph1('red');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 1059) {
-        setParagraph1('black');
-        setParagraph2('deepskyblue');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 1436) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('limegreen');
-        setParagraph4('black');
+      if(screenHeight > 677) {
+        if(positionY <= 51) {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 496) {
+          setParagraph1('red');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 907) {
+          setParagraph1('black');
+          setParagraph2('deepskyblue');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 1436) {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('limegreen');
+          setParagraph4('black');
+        } else {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('gold');
+        }
       } else {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('gold');
+        if(positionY <= 51) {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 496) {
+          setParagraph1('red');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 907) {
+          setParagraph1('black');
+          setParagraph2('deepskyblue');
+          setParagraph3('black');
+          setParagraph4('black');
+        } else if(positionY <= 1436) {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('limegreen');
+          setParagraph4('black');
+        } else {
+          setParagraph1('black');
+          setParagraph2('black');
+          setParagraph3('black');
+          setParagraph4('gold');
+        }
       }
+
     }
 
   }
