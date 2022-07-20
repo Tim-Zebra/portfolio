@@ -87,7 +87,12 @@ p {
   }
 
   #aboutProfileImage {
-    display: none;
+    position:absolute;
+    border-radius: 60%;
+    height: 175px;
+    width: 175px;
+    top: -125px;
+    left: 40px;
   }
 
   #aboutHeading {
@@ -108,11 +113,24 @@ p {
   #hello {
     font-size: 40px;
     padding-left: 0;
-    top: -125px;
-    left: 2%;
-    z-index: 1;
+    top: -150px;
+    left: 200px;
   }
+
   .sectionParagraphLinks:focus{
     font-size:20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #aboutProfileImage {
+    display: none;
+  }
+  
+  #hello {
+    font-size: 40px;
+    padding-left: 0;
+    top: -125px;
+    left: 2%;
   }
 }

@@ -1,22 +1,18 @@
 
-/* Section: Portfolio and Projects */
 .portfolioSection {
 
 }
 
 #projectSectionTitle {
-  text-align: center;
+
 }
 
 #projectSection {
 
 }
 
-/* reveal and hide features */
-/* .projectDiv img:hover + .hide {
-  display:block;
-} */
-
-/* .hide {
-  display: none;
-} */
+@media only screen and (max-width: 992px) {
+  #projectSectionTitle {
+    text-align: center;
+  }
+}
