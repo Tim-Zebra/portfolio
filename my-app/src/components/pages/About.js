@@ -33,7 +33,7 @@ export default function About() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpacity(0);
-    }, 1000);
+    }, 100000);
     return () => clearTimeout(timer);
   }, []);
 

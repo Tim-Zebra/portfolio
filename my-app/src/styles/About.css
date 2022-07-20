@@ -76,8 +76,15 @@ p {
 @media only screen and (max-width: 992px) {
   #aboutSection {
     padding-left: 1%;
+    width:100%;
+    margin:0px;
+    margin-top: 20%;
+    overflow: hidden;
   }
-  
+  #aboutAside{
+    width:100%;
+  }
+
   #aboutProfileImage {
     display: none;
   }
@@ -85,12 +92,15 @@ p {
     position:relative;
     top: 0px;
     font-size: 20px;
+    width:100%;
   }
   .aboutParagraphs {
     font-size: 20px;
     border-left: black 2px dotted;
-    padding: 5px;
+    padding: 0px;
+    width:100%;
   }
+
   #hello {
     font-size: 40px;
     top:-120px;
