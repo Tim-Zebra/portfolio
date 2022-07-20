@@ -52,14 +52,14 @@ export default function ProjectAbout({currentProject, handleReset}) {
           </p>
           <div className="d-flex justify-content-between" id="aboutFooter">
             {currentProject.deployed !== false &&
-              <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="projectDeployedAt text-center">Check it Out!</a>
+              <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="text-center" id="projectDeployedAt">Check it Out!</a>
             }
             {currentProject.deployed === false &&
-              <span className='projectNotDeployed text-center'>
+              <a className='text-center' id="projectNotDeployed">
                 Local Project
-              </span>
+              </a>
             }
-            <a href={currentProject.github} target="_blank" rel="noreferrer" className="projectGitHubLink text-center">
+            <a href={currentProject.github} target="_blank" rel="noreferrer" className="text-center" id="projectGitHubLink">
               GitHub Repo
             </a>
           </div>
