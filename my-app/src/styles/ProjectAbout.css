@@ -90,8 +90,7 @@
   border: black 2px solid;
   box-shadow: 0px 0px 40px 30px rgb(90, 219, 142);
   border-radius: 20%;
-  padding: 1%;
-
+  padding: 2%;
 }
 
 #projectDeployedAt:hover {
@@ -109,14 +108,14 @@
   border: black 2px solid;
   box-shadow: 0px 0px 40px 30px rgb(90, 219, 142);
   border-radius: 20%;
-  padding: 1%;
+  padding: 2%;
 }
 
 #projectNotDeployed {
   font-size: 50px;
   box-shadow: 10px 5px 5px red;
   border-radius: 50%;
-  padding: 1%;
+  padding: 2%;
 }
 
 #projectNotDeployed:hover {
@@ -151,7 +150,7 @@
 #projectGitHubLink {
   transition: 0.2s;
   border-radius: 50%;
-  padding:1%;
+  padding:2%;
   background-color: black;
   color: white;
   box-shadow: -15px -20px 10px rgb(89, 168, 224);
@@ -188,11 +187,7 @@
   }
 
   #createdUsing {
-    font-size: 35px;
-    position: relative;
-    top: -50%;
-    right: 35%;
-    transition: 0.5s;
+    top: -17%;
   }
   
   #createdUsingTextBox {
@@ -202,6 +197,9 @@
     top: -45%;
   }
 
+  #aboutFooter {
+    margin-top: 5%;
+  }
 }
 
 /* Mobile screen size*/

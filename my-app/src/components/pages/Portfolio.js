@@ -102,7 +102,7 @@ export default function Portfolio() {
 
   return (
     <section className="portfolioSection">
-      <h1 id="projectSectionTitle">Portfolio</h1>
+      <h1 class="col-12" id="projectSectionTitle">Portfolio</h1>
       <div className="d-flex row justify-content-around" id="projectSection">
         <Project projectNum={1} currentProject={projectObj.project1} selectedStatus={isSelectedProject1} handleSelection={handleSelection} firstLanding={firstLanding}/>
         <Project projectNum={2} currentProject={projectObj.project2} selectedStatus={isSelectedProject2} handleSelection={handleSelection} firstLanding={firstLanding}/>
