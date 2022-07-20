@@ -45,14 +45,16 @@ export default function ProjectAbout({currentProject, handleReset}) {
           >
             &#10060;
           </button>
+          <div className='aboutHeaderContent'>
+            <div id="createdUsing" style={createdUsingStyle}>
+            Created by Using: 
+            </div>
+            <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>
+          </div>
         </div>
 
         <div className="" id='aboutContent'>
-          <p id="createdUsing" style={createdUsingStyle}>
-          Created by Using: 
-          </p>
-          <div className="text-center" id='createdUsingTextBox'>{currentProject.prgms}</div>
-          <p>
+          <p className="col-8" id="aboutContentParagraph">
             {currentProject.about}
           </p>
           <div className="d-flex justify-content-around" id="aboutFooter">

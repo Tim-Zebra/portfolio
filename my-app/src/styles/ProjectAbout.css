@@ -19,7 +19,7 @@
 #exitButton {
   position: relative;
   left: 95%;
-  bottom: 60%;
+  bottom: 30%;
   font-size: 40px;
   background-color: transparent;
   border-radius: 10%;
@@ -43,9 +43,9 @@
   box-shadow: 0px 0px 10px red;
 }
 
-/* Content */
-#aboutContent {
-  border: green dotted 3px;
+/* Header Content */
+.aboutHeaderContent {
+  border: teal dashed 3px;
   width: 100%;
 }
 
@@ -53,7 +53,7 @@
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  right: 40%;
+  right: 0%;
   bottom: 26%;
   transition: 0.5s;
 }
@@ -63,6 +63,18 @@
   font-family: 'Courier New', Courier, monospace;
   position: relative;
   bottom: 55%;
+}
+
+/* Content */
+#aboutContent {
+  border: orange dotted 3px;
+  width: 100%;
+}
+
+
+
+#aboutContentParagraph {
+  font-size: 20px;
 }
 
 /* Footer */
