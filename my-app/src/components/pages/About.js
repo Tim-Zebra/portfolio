@@ -3,26 +3,54 @@ import '../../styles/About.css'
 
 export default function About() {
   // Changes the opacity of Hello!
-  const [opacity, setOpacity] = useState(1);
+  const [opacity, setOpacity] = useState(0);
   const [ paragraph1, setParagraph1 ] = useState('black');
   const [ paragraph2, setParagraph2 ] = useState('black');
   const [ paragraph3, setParagraph3 ] = useState('black');
   const [ paragraph4, setParagraph4 ] = useState('black');
 
-  // Logic from Scroill position
+  // Logic from Scroll position
   const handleScroll = () => {
     const position = window.scrollY;
+    const screenWidth = window.screen.width;
     console.log('This happened', position);
+    changeParagraphBorderMobile(position, screenWidth);
+
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  const changeParagraphBorderMobile = (positionY, screenWidth) => {
+    if(screenWidth < 450) {
+      if(positionY <= 51) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 496) {
+        setParagraph1('red');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 1059) {
+        setParagraph1('black');
+        setParagraph2('deepskyblue');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 1436) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('limegreen');
+        setParagraph4('black');
+      } else {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('gold');
+      }
+    }
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  }
 
+  // Updates all the paragraphs to their original state
   const helloStyle = {
     opacity: opacity,
   }
@@ -43,12 +71,28 @@ export default function About() {
     borderColor: paragraph4,
   }
 
-  // Fade effect of the greeting after 1 second
+  // Fade effect of the greeting in and out after 1 second
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpacity(1);
+    }, 1);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpacity(0);
-    }, 100000);
+    }, 2000);
     return () => clearTimeout(timer);
+  }, []);
+
+  // Adds event listener to window scrolling
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (

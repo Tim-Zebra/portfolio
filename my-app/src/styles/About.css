@@ -48,7 +48,7 @@ p {
   font-size: 40px;
   font-weight: 600;
   transition-delay: 2s;
-  transition: 0.5s;
+  transition: 0.8s;
   position:absolute;
   top:-50px;
 }
@@ -78,9 +78,10 @@ p {
     padding-left: 1%;
     width:100%;
     margin:0px;
-    margin-top: 20%;
+    padding-top: 20%;
     overflow: hidden;
   }
+
   #aboutAside{
     width:100%;
   }
@@ -88,23 +89,28 @@ p {
   #aboutProfileImage {
     display: none;
   }
+
   #aboutHeading {
     position:relative;
     top: 0px;
     font-size: 20px;
     width:100%;
   }
+
   .aboutParagraphs {
     font-size: 20px;
     border-left: black 2px dotted;
     padding: 0px;
+    padding-left: 10px;
     width:100%;
   }
 
   #hello {
     font-size: 40px;
-    top:-120px;
     padding-left: 0;
+    top: -7%;
+    left: 2%;
+    z-index: 1;
   }
   .sectionParagraphLinks:focus{
     font-size:20px;
