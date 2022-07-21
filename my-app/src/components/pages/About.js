@@ -106,18 +106,18 @@ export default function About() {
     borderColor: paragraph4,
   }
 
-  // Fade effect of the greeting in and out after 1 second
+  // Fade effect of the greeting in and out after 2 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpacity(1);
-    }, 1);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpacity(0);
-    }, 2000);
+    }, 8000);
     return () => clearTimeout(timer);
   }, []);
 
