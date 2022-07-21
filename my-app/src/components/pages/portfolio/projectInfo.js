@@ -14,7 +14,7 @@ export const projectObj = {
     deployed: 'https://timzebratechblog.herokuapp.com/',
     prgms: 'Express, SQL, Sequelize, handlebars',
     image: 'images/projectImages/clinicalPlatformStreamLined.png',
-    about: 'Concise and straight forward healthcare portal designed to stream line doctor patient relationship without all distractions found in today’s applications.',
+    about: 'Concise and straight forward healthcare portal designed to stream line doctor patient relationship without all the distractions common in today’s applications.',
   },
   project3: {
     title: 'Love/Compatability Finder',  
