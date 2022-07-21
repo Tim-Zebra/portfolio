@@ -11,8 +11,20 @@
 
 }
 
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Laptop screens */
 @media only screen and (max-width: 992px) {
   #projectSectionTitle {
     text-align: center;
   }
 }
+
+/* Phone/Mobile */
+@media only screen and (max-width: 450px) {
+
+}
+

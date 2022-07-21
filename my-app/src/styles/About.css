@@ -64,6 +64,7 @@ p {
   text-decoration: none;
 }
 
+/* Extra large display */
 @media only screen and (min-width: 2000px) {
   #aboutHeading {
     top: 400px;
@@ -73,6 +74,12 @@ p {
   }
 }
 
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Laptop screens */
 @media only screen and (max-width: 992px) {
   #aboutSection {
     padding-left: 1%;
@@ -122,6 +129,7 @@ p {
   }
 }
 
+/* Phone/Mobile */
 @media only screen and (max-width: 450px) {
   #aboutProfileImage {
     display: none;

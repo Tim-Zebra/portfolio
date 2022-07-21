@@ -21,8 +21,18 @@ footer a img {
   height: 75px;
 }
 
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
 
-@media only screen and (max-width: 600px) {
+}
+
+/* Laptop screens */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Phone/Mobile */
+@media only screen and (max-width: 450px) {
   footer {
     margin-top: 0px;
   }

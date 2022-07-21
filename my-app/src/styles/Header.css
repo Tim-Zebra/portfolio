@@ -68,6 +68,13 @@ header h1 {
   padding-bottom: 5px;
 }
 
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Laptop screens */
 @media only screen and (max-width: 992px) {
   #headerTextContent {
     width: 90%;
@@ -78,4 +85,9 @@ header h1 {
   .nav {
     padding-bottom: 3px;
   }
+}
+
+/* Phone/Mobile */
+@media only screen and (max-width: 450px) {
+
 }

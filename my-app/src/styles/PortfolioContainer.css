@@ -13,3 +13,18 @@
   width: 75px;
   height: 75px;
 }
+
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Laptop screens */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Phone/Mobile */
+@media only screen and (max-width: 450px) {
+
+}
