@@ -3,13 +3,18 @@
   height: 300px;
   position: relative;
   transition: 0.5s;
-  border: black 4px solid;
 }
 
 #backgroundImage {
-  border: blue 4px dotted;
   width: 100%; 
-  
+}
+
+#backgroundImage:hover {
+  box-shadow: 0px 0px 40px 10px grey;
+}
+
+#backgroundImage:hover + .projectDiv {
+  width: 100%; 
 }
 
 #backgroundImage:hover {

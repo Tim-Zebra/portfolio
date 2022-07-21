@@ -11,13 +11,6 @@
 
 }
 
-/* Adjusts footer for screen height > 1135 */
-@media only screen and (min-height: 1135px) {
-  #footer {
-    position: fixed;
-  }
-}
-
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {
 
