@@ -20,7 +20,7 @@ const iconLinkObj = {
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <IconCreator activeIconObj={iconLinkObj.github} />
       <IconCreator activeIconObj={iconLinkObj.linkedin} />
       <IconCreator activeIconObj={iconLinkObj.stackoverflow} />
