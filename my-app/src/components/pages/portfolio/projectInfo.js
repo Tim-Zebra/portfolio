@@ -20,7 +20,7 @@ export const projectObj = {
     title: 'Love/Compatability Finder',  
     github: 'https://github.com/Tim-Zebra/Compatible-or-Not_Find-true-love-here.',
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
-    prgms: 'APIs, HTML, CSS, JS, Collaboration',
+    prgms: 'APIs, HTML, CSS, JS',
     image: 'images/projectImages/compatibility.gif',
     about: 'See into your romantic destiny by finding true love based on just two names analyzed by a third-party API. Plus dating tips and advice to help boost your special connection!',
   },

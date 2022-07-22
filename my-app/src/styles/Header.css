@@ -89,5 +89,7 @@ header h1 {
 
 /* Phone/Mobile */
 @media only screen and (max-width: 450px) {
-
+  .nav {
+    padding-bottom: 5px;
+  }
 }

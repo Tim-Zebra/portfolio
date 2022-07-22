@@ -204,6 +204,34 @@
 
 /* Laptop screens */
 @media only screen and (max-width: 992px) {
+  #createdUsing {
+    font-size: 40px;
+    top:-19%;
+  }
+
+  #createdUsingTextBox {
+    font-size: 36px;
+  }
+
+  #aboutContentParagraph {
+    font-size: 32px;
+  }
+  
+  #aboutFooter {
+    margin-top: 10%;
+  }
+
+  #projectNotDeployed {
+    font-size: 30px;
+  }
+
+  #projectDeployedAt {
+    font-size: 40px;
+  }
+
+  #projectGitHubLink {
+    font-size: 40px;
+  }
 
 }
 
