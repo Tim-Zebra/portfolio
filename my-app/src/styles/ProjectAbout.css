@@ -1,4 +1,5 @@
 #projectInfo {
+  margin-top: 1%;
   width: 100%;
   transition: 0.5s;
   cursor: default;
@@ -243,7 +244,7 @@
   #titleHeading {
     font-size: 50px;
     margin-left: 0px;
-    margin-right: 8px;
+    margin-right: 0px;
     margin-bottom: 30px;
     padding: 0px;
 
@@ -260,35 +261,48 @@
   }
 
   #createdUsing {
-    font-size: 40px;
+    font-size: 35px;
     top:0%;
     margin-top: 5%;
   }
 
   #createdUsingTextBox {
     font-size: 36px;
-    top: 0%;
+    top: -22%;
     width: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
 
   #aboutContentParagraph {
     font-size: 32px;
     padding: 0px;
+    padding-top: 10px;
   }
   
   #aboutFooter {
-    margin-top: 10%;
+    margin-top: 20%;
+    margin-bottom: 80px;
   }
 
   #projectNotDeployed {
-    font-size: 40px;
+    font-size: 30px;
+    position: relative;
+    left: 22%;
   }
 
   #projectDeployedAt {
-    font-size: 40px;
+    font-size: 30px;
+    position: relative;
+    left: 22%;
+    box-shadow: 0px 0px 40px 10px rgb(90, 219, 142);
   }
 
   #projectGitHubLink {
-    font-size: 40px;
+    font-size: 30px;
+    position: relative;
+    top: 170px;
+    right: 27%;
+    box-shadow: 0px 0px 40px 10px rgb(89, 168, 224);
   }
 }
