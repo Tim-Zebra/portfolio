@@ -7,6 +7,8 @@
 
 #backgroundImage {
   width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #backgroundImage:hover {
@@ -39,30 +41,22 @@
 
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {
-  .projectDiv {
 
-  }
-  .projectContent {
-
-  }
 }
 
 /* Laptop screens */
 @media only screen and (max-width: 992px) {
-  .projectDiv {
-
-  }
-  .projectContent {
-
+  #backgroundImage {
+    width: 70%; 
   }
 }
 
 /* Phone/Mobile */
 @media only screen and (max-width: 450px) {
   .projectDiv {
-
+    height: 175px;
   }
-  .projectContent {
-
+  #backgroundImage {
+    width: 100%; 
   }
 }

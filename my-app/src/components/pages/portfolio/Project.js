@@ -28,7 +28,7 @@ export default function Project({projectNum, currentProject, selectedStatus, han
   const [isSelected, setIsSelected] = useState(selectedStatus);
   if (!selectedStatus && firstLanding) {
     return (
-      <a className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv' href='#titleHeading'
+      <a className='d-flex col-12 col-lg-6 col-xl-4 my-3 projectDiv' href='#titleHeading' id="projectImage-a"
       >
         <img 
         onClick={() =>  handleSelection(true, currentProject.title, projectNum)}
