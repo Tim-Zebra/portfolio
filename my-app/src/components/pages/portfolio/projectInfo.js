@@ -21,7 +21,7 @@ export const projectObj = {
     github: 'https://github.com/Tim-Zebra/Compatible-or-Not_Find-true-love-here.',
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
     prgms: 'APIs, HTML, CSS, JS',
-    image: 'images/projectImages/compatibility.gif',
+    image: 'images/projectImages/compatibility.png',
     about: 'See into your romantic destiny by finding true love based on just two names analyzed by a third-party API. Plus dating tips and advice to help boost your special connection!',
   },
   project4: {
@@ -29,7 +29,7 @@ export const projectObj = {
     github: 'https://github.com/Tim-Zebra/Team-Builder',
     deployed: false,
     prgms: 'Node, Jest',
-    image: 'images/projectImages/teamBuilder.gif',
+    image: 'images/projectImages/teamBuilder.png',
     about: 'This team builder is compiled using the Node.js terminal. One of the more interesting features I implemented not only saved the team data, but also automatically opened the data file. This allowed for smooth transition between completing the work and then viewing the final product. \n\n Give it a whirl, and you\'ll get to experience how clean the application feels.',
 },
   project5: {
