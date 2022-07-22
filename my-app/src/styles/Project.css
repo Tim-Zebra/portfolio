@@ -56,6 +56,11 @@
   .projectDiv {
     height: 175px;
   }
+
+  #backgroundImage:hover {
+    box-shadow: none;
+  }
+
   #backgroundImage {
     width: 100%; 
   }

@@ -17,7 +17,7 @@ export const projectObj = {
     about: 'Concise and straight forward healthcare portal designed to stream line doctor patient relationship without all the distractions common in today’s applications.',
   },
   project3: {
-    title: 'Love/Compatability Finder',  
+    title: 'Love & Compatability Finder',  
     github: 'https://github.com/Tim-Zebra/Compatible-or-Not_Find-true-love-here.',
     deployed: 'https://tim-zebra.github.io/Compatible-or-Not_Find-true-love-here./',
     prgms: 'APIs, HTML, CSS, JS',

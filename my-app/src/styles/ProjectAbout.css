@@ -222,7 +222,7 @@
   }
 
   #projectNotDeployed {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   #projectDeployedAt {
@@ -237,5 +237,58 @@
 
 /* Phone/Mobile */
 @media only screen and (max-width: 450px) {
+  #projectInfo {
+    margin-left: 1%;
+  }
+  #titleHeading {
+    font-size: 50px;
+    margin-left: 0px;
+    margin-right: 8px;
+    margin-bottom: 30px;
+    padding: 0px;
 
+  }
+  #exitButton {
+    font-size: 25px;
+    top: 0%;
+    left: 2%;
+    width: 90%;
+    border-color: black;
+    border-radius: 10%;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  #createdUsing {
+    font-size: 40px;
+    top:0%;
+    margin-top: 5%;
+  }
+
+  #createdUsingTextBox {
+    font-size: 36px;
+    top: 0%;
+    width: auto;
+  }
+
+  #aboutContentParagraph {
+    font-size: 32px;
+    padding: 0px;
+  }
+  
+  #aboutFooter {
+    margin-top: 10%;
+  }
+
+  #projectNotDeployed {
+    font-size: 40px;
+  }
+
+  #projectDeployedAt {
+    font-size: 40px;
+  }
+
+  #projectGitHubLink {
+    font-size: 40px;
+  }
 }
