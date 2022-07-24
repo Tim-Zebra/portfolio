@@ -70,11 +70,28 @@ const frontEndProfInactive = () => {
             <ul>
               <li>HTML</li>
               <li>CSS</li>
-              <li>JavaScript</li>
-              <li>jQuery</li>
               <li>responsive design</li>
-              <li>React</li>
               <li>Boostrap</li>
+            </ul>
+          </h4>
+        </div>
+        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
+        style={backendProfStyle}>
+          <h4>
+            Languages/Libraries
+            <ul>
+              <li>React</li>
+              <li>jQuery</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>{'I M TEST :)'}
+                <img href={"https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"}></img>
+                <img src={"https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"}></img>
+              </li>
+              <li>Python</li>
             </ul>
           </h4>
         </div>
