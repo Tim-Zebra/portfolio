@@ -66,32 +66,14 @@ const frontEndProfInactive = () => {
         onMouseLeave={() => {resumeStyleChangeInactive(); frontEndProfInactive();}}
         style={frontendProfStyle}>
           <h4>
-            Front-End Proficiences
+            Libraries
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>responsive design</li>
-              <li>Boostrap</li>
-            </ul>
-          </h4>
-        </div>
-        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
-        style={backendProfStyle}>
-          <h4>
-            Languages/Libraries
-            <ul>
-              <li>React</li>
-              <li>jQuery</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>C#</li>
-              <li>{'I M TEST :)'}
-                <img href={"https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"}></img>
+              <li>
                 <img src={"images/badges/react.svg"}></img>
               </li>
-              <li>Python</li>
+              <li>
+                <img src={"images/badges/jwt.svg"}></img>
+              </li>
             </ul>
           </h4>
         </div>
@@ -100,15 +82,101 @@ const frontEndProfInactive = () => {
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
-            Back-End Proficiences
+            Languages
             <ul>
-              <li>APIs</li>
-              <li>Node</li>
-              <li>Express</li>
-              <li>mySQL, Sequelize</li>
-              <li>noSQL, MongoDB, Mongoose</li>
-              <li>REST</li>
-              <li>GraphQL</li>
+              <li>
+                <img src={"images/badges/csharp.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/python.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/javaScript.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/java.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/HTML5.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/CSS3.svg"}></img>
+              </li>
+            </ul>
+          </h4>
+        </div>
+        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
+        style={backendProfStyle}>
+          <h4>
+            Databases/Realted:
+            <ul>
+            <li>
+                <img src={"images/badges/mySQL.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/sequelize.svg"}></img>
+              </li>
+              <li> and Mongoose :/
+                <img src={"images/badges/mongoDB.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/graphQL.svg"}></img>
+              </li>
+              <li>
+                REST
+              </li>
+              <li>
+                <img src={"images/badges/apolloGraphQL.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/flask.svg"}></img>
+              </li>
+            </ul>
+          </h4>
+        </div>
+        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
+        style={backendProfStyle}>
+          <h4>
+            Packages/Frameworks:
+            <ul>
+            <li>
+                <img src={"images/badges/net.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/node.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/bootstrap.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/jwt.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/styledComponents.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/jest.svg"}></img>
+              </li>
+            </ul>
+          </h4>
+        </div>
+        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
+        style={backendProfStyle}>
+          <h4>
+            Services
+            <ul>
+            <li>
+                <img src={"images/badges/heroku.svg"}></img>
+              </li>
+              <li>
+                <img src={"images/badges/gitHub.svg"}></img>
+              </li>
             </ul>
           </h4>
         </div>
