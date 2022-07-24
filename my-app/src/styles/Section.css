@@ -31,29 +31,7 @@ section {
   border: black 2px solid;
 }
 
-/* Section: Resume */
-#resumeBlock {
-  margin-bottom: 100px;
-}
 
-.resumeProficiences:hover {
-  cursor: default;
-}
-
-.resumeProficiences:hover > h1 {
-  cursor: default;
-  font-size: 5px;
-}
-
-.resumeProficiences:hover > ul {
-  cursor: default;
-  font-size: 5px;
-}
-
-
-.resumeProficiences {
-  margin-left: 100px;
-}
 
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {

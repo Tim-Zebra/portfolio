@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "../../styles/Resume";
 import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
