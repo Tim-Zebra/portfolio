@@ -3,86 +3,97 @@ import "../../styles/Resume.css";
 import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
-// Styles for resume
-// style reset
-const noStyle = {
-  transitionDuration: '0.5s',
-};
+  // Styles for resume
+  // style reset
+  const noStyle = {
+    transitionDuration: '0.5s',
+  };
 
-// style for resume link
-const linkStyle = {
-  color: 'red',
-  fontSize: '40px',
-  transitionDuration: '2s',
-}
+  // style for resume link
+  const linkStyle = {
+    color: 'red',
+    fontSize: '40px',
+    transitionDuration: '2s',
+  }
 
-// style for proficiencies 
-const profStyle = {
-  opacity: '0.2',
-  transitionDuration: '1s',
-}
+  // style for proficiencies 
+  const profStyle = {
+    opacity: '0.2',
+    transitionDuration: '1s',
+  }
 
-// Variables to handle style change
-const [ resumeStyle, setResumeStyle] = useState(noStyle);
-const [ librariesRuntimesStyle, setLibrariesRuntimesStyle] = useState(noStyle);
-const [ languagesStyle, setLanguagesStyle] = useState(noStyle);
-const [ databasesORMRelatedStyle, setDatabasesORMRelatedStyle] = useState(noStyle);
-const [ packagesFrameworksStyle, setPackagesFrameworksStyle] = useState(noStyle);
-const [ servicesStyle, setServicesStyle] = useState(noStyle);
+  // Variables to handle style change
+  // header section
+  const [ resumeStyle, setResumeStyle] = useState(noStyle);
+  // sub-header section
+  const [ frontEndButtonStyle, setFrontEndButtonStyle ] = (noStyle);
+  const [ backEndButtonStyle, setBackEndButtonStyle ] = (noStyle);
+  const [ fullStackButtonStyle, setFullStackButtonStyle ] = (noStyle);
+  // proficiencies Section
+  const [ librariesRuntimesStyle, setLibrariesRuntimesStyle] = useState(noStyle);
+  const [ languagesStyle, setLanguagesStyle] = useState(noStyle);
+  const [ databasesORMRelatedStyle, setDatabasesORMRelatedStyle] = useState(noStyle);
+  const [ packagesFrameworksStyle, setPackagesFrameworksStyle] = useState(noStyle);
+  const [ applicationsStyle, setApplicationsStyle] = useState(noStyle);
 
-// function to handle resume style change
-const resumeStyleChangeActive = () => {
-  setResumeStyle(linkStyle);
-}
+  // Handle changes
+  const handleTalentSelection = () => {
 
-const resumeStyleChangeInactive = () => {
-  setResumeStyle(noStyle);
-}
+  }
+  // function to handle resume style change
+  const resumeStyleChangeActive = () => {
+    setResumeStyle(linkStyle);
+  }
 
-// Front end section mouse activity style change
-const librariesRuntimesActive = () => {
-  setLibrariesRuntimesStyle(profStyle);
-}
+  const resumeStyleChangeInactive = () => {
+    setResumeStyle(noStyle);
+  }
 
-const librariesRuntimesInactive = () => {
-  setLibrariesRuntimesStyle(noStyle);
-}
+  // talent cards
+  // librariesRuntimes section mouse activity style change
+  const librariesRuntimesActive = () => {
+    setLibrariesRuntimesStyle(profStyle);
+  }
 
-// Backend section mouse activity style change
-const languagesActive = () => {
-  setLanguagesStyle(profStyle);
-}
+  const librariesRuntimesInactive = () => {
+    setLibrariesRuntimesStyle(noStyle);
+  }
 
-const languagesInactive = () => {
-  setLanguagesStyle(noStyle);
-}
+  // languages section mouse activity style change
+  const languagesActive = () => {
+    setLanguagesStyle(profStyle);
+  }
 
-// Backend section mouse activity style change
-const databasesORMRelatedActive = () => {
-  setDatabasesORMRelatedStyle(profStyle);
-}
+  const languagesInactive = () => {
+    setLanguagesStyle(noStyle);
+  }
 
-const databasesORMRelatedInactive = () => {
-  setDatabasesORMRelatedStyle(noStyle);
-}
+  // databasesORMRelated section mouse activity style change
+  const databasesORMRelatedActive = () => {
+    setDatabasesORMRelatedStyle(profStyle);
+  }
 
-// Backend section mouse activity style change
-const packagesFrameworksActive = () => {
-  setPackagesFrameworksStyle(profStyle);
-}
+  const databasesORMRelatedInactive = () => {
+    setDatabasesORMRelatedStyle(noStyle);
+  }
 
-const packagesFrameworksInactive = () => {
-  setPackagesFrameworksStyle(noStyle);
-}
+  // packagesFrameworks section mouse activity style change
+  const packagesFrameworksActive = () => {
+    setPackagesFrameworksStyle(profStyle);
+  }
 
-// Backend section mouse activity style change
-const servicesActive = () => {
-  setServicesStyle(profStyle);
-}
+  const packagesFrameworksInactive = () => {
+    setPackagesFrameworksStyle(noStyle);
+  }
 
-const servicesInactive = () => {
-  setServicesStyle(noStyle);
-}
+  // applications section mouse activity style change
+  const applicationsActive = () => {
+    setServicesStyle(profStyle);
+  }
+
+  const applicationsInactive = () => {
+    setApplicationsStyle(noStyle);
+  }
 
   return (
     <section className="portfolioSection">
@@ -91,9 +102,21 @@ const servicesInactive = () => {
         <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
-        <h2 className='col-4'>Front-End Talents</h2>
-        <h2 className='col-4'>Full-Stack Talents</h2>
-        <h2 className='col-4'>Back-End Talents</h2>
+        <h2 className='col-4'
+        style={frontEndButtonStyle}
+        >
+          Front-End Talents
+        </h2>
+        <h2 className='col-4'
+        style={backEndButtonStyle}
+        >
+          Full-Stack Talents
+        </h2>
+        <h2 className='col-4'
+        style={fullStackButtonStyle}
+        >
+          Back-End Talents
+        </h2>
       </div>
       <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
         <div id="resumeLibrariesRuntimes" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
@@ -205,12 +228,12 @@ const servicesInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="resumeServices" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
-        onMouseEnter={() => {resumeStyleChangeActive(); servicesActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); servicesInactive();}}
-        style={servicesStyle}>
+        <div id="resumeApplications" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); applicationsActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); applicationsInactive();}}
+        style={applicationsStyle}>
           <h4 className="resumeSkillsHeader">
-            Services:
+            Applications:
             <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/heroku.svg"} alt="heroku badge"></img>
