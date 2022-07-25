@@ -97,7 +97,6 @@ export default function Resume() {
   // modularized buttons
   // Handles front button pressed
   const handleFrontSelection = () => {
-    console.log('This happened');
     if(frontSelected === false) {
       setBackEndTalentStyle(fadeTalentStyle);
       setFrontSelected(true);
