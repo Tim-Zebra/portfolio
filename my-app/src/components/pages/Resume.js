@@ -16,6 +16,27 @@ export default function Resume() {
     transitionDuration: '2s',
   }
 
+  // style for Front/Back/Full
+  const baseFrontStyle = {
+    color: 'black',
+  }
+  const baseBackStyle = {
+    color: 'black',
+  }
+  const baseFullStyle = {
+    color: 'black',
+  }
+
+  const frontWordStyle = {
+    color: 'rgb(250, 67, 67)',
+  }
+  const backWordStyle = {
+    color: 'rgb(101, 196, 255)',
+  }
+  const fullWordStyle = {
+    color: 'rgb(171, 72, 171)',
+  }
+
   // style for proficiencies 
   const profStyle = {
     opacity: '0.2',
@@ -26,9 +47,9 @@ export default function Resume() {
   // header section
   const [ resumeStyle, setResumeStyle] = useState(noStyle);
   // sub-header section
-  const [ frontEndButtonStyle, setFrontEndButtonStyle ] = (noStyle);
-  const [ backEndButtonStyle, setBackEndButtonStyle ] = (noStyle);
-  const [ fullStackButtonStyle, setFullStackButtonStyle ] = (noStyle);
+  const [ frontEndButtonStyle, setFrontEndButtonStyle ] = useState(baseFrontStyle);
+  const [ backEndButtonStyle, setBackEndButtonStyle ] = useState(baseBackStyle);
+  const [ fullStackButtonStyle, setFullStackButtonStyle ] = useState(baseFullStyle);
   // proficiencies Section
   const [ librariesRuntimesStyle, setLibrariesRuntimesStyle] = useState(noStyle);
   const [ languagesStyle, setLanguagesStyle] = useState(noStyle);
@@ -88,7 +109,7 @@ export default function Resume() {
 
   // applications section mouse activity style change
   const applicationsActive = () => {
-    setServicesStyle(profStyle);
+    setApplicationsStyle(profStyle);
   }
 
   const applicationsInactive = () => {
@@ -103,19 +124,21 @@ export default function Resume() {
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
         <h2 className='col-4'
+        onMouseEnter={() => {resumeStyleChangeActive(); librariesRuntimesActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
         style={frontEndButtonStyle}
         >
-          Front-End Talents
-        </h2>
-        <h2 className='col-4'
-        style={backEndButtonStyle}
-        >
-          Full-Stack Talents
+          <span style={frontWordStyle}>Front</span>-End Talents
         </h2>
         <h2 className='col-4'
         style={fullStackButtonStyle}
         >
-          Back-End Talents
+          <span style={fullWordStyle}>Full</span>-Stack Talents
+        </h2>
+        <h2 className='col-4'
+        style={backEndButtonStyle}
+        >
+          <span style={backWordStyle}>Back</span>-End Talents
         </h2>
       </div>
       <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
