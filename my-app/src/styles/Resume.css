@@ -12,6 +12,14 @@
   margin-bottom: 100px;
 }
 
+.resumeTalentOption {
+  cursor: pointer;
+}
+
+.resumeTalentOption:active {
+  box-shadow: 0px 0px 50px 10px grey;
+}
+
 .resumeProficiencies {
   border: blue dotted 2px;
 }

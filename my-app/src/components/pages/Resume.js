@@ -102,6 +102,7 @@ export default function Resume() {
       setFrontEndTalentStyle(defaultTalentStyle);
       setBackSelected(false);
       setBackEndTalentStyle(fadeTalentStyle);
+      setFullSelected(false);
       setNoTalentStyle(fadeTalentStyle);
     } else if (frontSelected === true) {
       setBackEndTalentStyle(defaultTalentStyle);
@@ -116,6 +117,7 @@ export default function Resume() {
       setBackEndTalentStyle(defaultTalentStyle);
       setFrontSelected(false);
       setFrontEndTalentStyle(fadeTalentStyle);
+      setFullSelected(false);
       setNoTalentStyle(fadeTalentStyle);
     } else if (backSelected === true) {
       setFrontEndTalentStyle(defaultTalentStyle);
@@ -208,19 +210,25 @@ export default function Resume() {
         onClick={() => {handleTalentSelection('front');}}
         style={frontEndButtonStyle}
         >
-          <span style={frontWordStyle}>Front</span>-End Talents
+          <text className='resumeTalentOption'>
+            <span style={frontWordStyle}>Front</span>-End Talents
+          </text>
         </h2>
         <h2 className='col-4'
         onClick={() => {handleTalentSelection('full');}}
         style={fullStackButtonStyle}
         >
-          <span style={fullWordStyle}>Full</span>-Stack Talents
+          <text className='resumeTalentOption'>
+            <span style={fullWordStyle}>Full</span>-Stack Talents
+          </text>
         </h2>
         <h2 className='col-4'
         style={backEndButtonStyle}
         onClick={() => {handleTalentSelection('back');}}
         >
-          <span style={backWordStyle}>Back</span>-End Talents
+          <text className='resumeTalentOption'>
+            <span style={backWordStyle}>Back</span>-End Talents
+          </text>
         </h2>
       </div>
       <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
