@@ -43,6 +43,20 @@ export default function Resume() {
     transitionDuration: '1s',
   }
 
+  // styles for individual talents
+  const defaultTalentStyle = {
+
+  }
+  const frontTalentStyle = {
+    opacity: 0.2,
+  }
+  const backTalentStyle = {
+
+  }
+  const fullTalentStyle = {
+
+  }
+
   // Variables to handle style change
   // header section
   const [ resumeStyle, setResumeStyle] = useState(noStyle);
@@ -56,6 +70,9 @@ export default function Resume() {
   const [ databasesORMRelatedStyle, setDatabasesORMRelatedStyle] = useState(noStyle);
   const [ packagesFrameworksStyle, setPackagesFrameworksStyle] = useState(noStyle);
   const [ applicationsStyle, setApplicationsStyle] = useState(noStyle);
+  // styles for types of talents
+  const [ frontEndTalentStyle, setFrontEndTalentStyle ] = useState(defaultTalentStyle); 
+  const [ backEndTalentStyle, setBackEndTalentStyle ] = useState(defaultTalentStyle); 
 
   // Variables to determine selection
   const [ frontSelected, setFrontSelected ] = useState(false);
@@ -64,8 +81,15 @@ export default function Resume() {
 
   // Handle changes
   const handleTalentSelection = (talent) => {
-    
+    if(talent === 'front' && frontSelected === false) {
+      setFrontEndTalentStyle(frontTalentStyle);
+      setFrontSelected(true);
+    } else if (talent === 'front' && frontSelected === true) {
+      setFrontEndTalentStyle(defaultTalentStyle);
+      setFrontSelected(false);
+    }
   }
+
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
     setResumeStyle(linkStyle);
@@ -73,19 +97,6 @@ export default function Resume() {
 
   const resumeStyleChangeInactive = () => {
     setResumeStyle(noStyle);
-  }
-
-  // handles changes in Talents
-  const handleFrontClick = (value) => {
-    setFrontSelected(value);
-  }
-
-  const handleBackClick = () => {
-    
-  }
-
-  const handleFullClick = () => {
-    
   }
 
   // talent cards
@@ -169,16 +180,16 @@ export default function Resume() {
             Libraries/Runtimes:
             <ul className="resumeSkillsList">
               <li>
-                <img src={"images/badges/react.svg"} alt="react badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/react.svg"} alt="react badge"></img>
               </li>
               <li>
-                <img src={"images/badges/jQuery.svg"} alt="jQuery badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/jQuery.svg"} alt="jQuery badge"></img>
               </li>
               <li>
-                <img src={"images/badges/node.svg"} alt="node.js badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/node.svg"} alt="node.js badge"></img>
               </li>
               <li>
-                <img src={"images/badges/styledComponents.svg"} alt="styled-components badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/styledComponents.svg"} alt="styled-components badge"></img>
               </li>
             </ul>
           </h4>
@@ -191,22 +202,22 @@ export default function Resume() {
             Languages:
             <ul className="resumeSkillsList">
               <li>
-                <img src={"images/badges/javaScript.svg"} alt="javascript badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/javaScript.svg"} alt="javascript badge"></img>
               </li>
               <li>
-                <img src={"images/badges/HTML5.svg"} alt="HTML-5 badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/HTML5.svg"} alt="HTML-5 badge"></img>
               </li>
               <li>
-                <img src={"images/badges/CSS3.svg"} alt="CSS-3 badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/CSS3.svg"} alt="CSS-3 badge"></img>
               </li>
               <li>
-                <img src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
               </li>
               <li>
-                <img src={"images/badges/python.svg"} alt="python badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/python.svg"} alt="python badge"></img>
               </li>
               <li>
-                <img src={"images/badges/java.svg"} alt="java badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/java.svg"} alt="java badge"></img>
               </li>
             </ul>
           </h4>
@@ -253,16 +264,16 @@ export default function Resume() {
                 <img src={"images/badges/express.svg"} alt="express.js badge"></img>
               </li>
               <li>
-                <img src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
               </li>
               <li>
                 <img src={"images/badges/jest.svg"} alt="jest badge"></img>
               </li>
               <li>
-                <img src={"images/badges/net.svg"} alt=".net badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/net.svg"} alt=".net badge"></img>
               </li>
               <li>
-                <img src={"images/badges/flask.svg"} alt="flask badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/flask.svg"} alt="flask badge"></img>
               </li>
               <li>
                 <img src={"images/badges/jwt.svg"} alt="jwt badge"></img>
