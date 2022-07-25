@@ -1,6 +1,22 @@
 /* Section: Resume */
 #resumeBlock {
   margin-bottom: 100px;
+  margin-left:0px;
+}
+
+.resumeProficiences {
+  border: blue dotted 2px;
+}
+
+.resumeSkillsList {
+  list-style:none;
+  padding: 0px;
+  border: red 2px solid;
+}
+
+.resumeSkillsList {
+  list-style:none;
+  border: red 2px solid;
 }
 
 .resumeProficiences:hover {
@@ -17,7 +33,19 @@
   font-size: 5px;
 }
 
+/* Medium sized monitors */
+@media only screen and (max-width: 1200px) {
 
-.resumeProficiences {
-  margin-left: 100px;
+}
+
+/* Laptop screens */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Phone/Mobile */
+@media only screen and (max-width: 450px) {
+  section {
+    margin:0px;
+  }
 }

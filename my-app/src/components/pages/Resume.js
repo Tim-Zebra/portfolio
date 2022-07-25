@@ -56,34 +56,40 @@ const frontEndProfInactive = () => {
 
   return (
     <section className="portfolioSection">
-      <div className="d-block mb-5 text-center">
+      <div id="resumeHeading" className="d-block text-center">
         <h1>Resume</h1>
         <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
-      <div id="resumeBlock" className="d-flex row col-12 ml-4 justify-content-around proficienciesBlock">
-        <div id="frontendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+      <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
+        <div id="resumeLibrariesRuntimes" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
         onMouseEnter={() => {resumeStyleChangeActive(); frontEndProfActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); frontEndProfInactive();}}
         style={frontendProfStyle}>
           <h4>
-            Libraries
-            <ul>
+            Libraries/Runtimes:
+            <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/react.svg"} alt="react badge"></img>
               </li>
               <li>
                 <img src={"images/badges/jQuery.svg"} alt="jQuery badge"></img>
               </li>
+              <li>
+                <img src={"images/badges/node.svg"} alt="node.js badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/styledComponents.svg"} alt="styled-components badge"></img>
+              </li>
             </ul>
           </h4>
         </div>
-        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        <div id="resumeLanguages" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
         onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
-            Languages
-            <ul>
+            Languages:
+            <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/javaScript.svg"} alt="javascript badge"></img>
               </li>
@@ -105,14 +111,14 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        <div id="resumeDatabasesORMRelated" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
         onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
             Databases/ORM/Related:
-            <ul>
-            <li>
+            <ul className="resumeSkillsList">
+              <li>
                 <img src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
               </li>
               <li>
@@ -136,48 +142,42 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        <div id="resumePackagesFrameworks" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
         onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
             Packages/Frameworks:
-            <ul>
-              <li>
-                <img src={"images/badges/node.svg"} alt="node.js badge"></img>
-              </li>
+            <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/express.svg"} alt="express.js badge"></img>
-              </li>
-              <li>
-                <img src={"images/badges/jwt.svg"} alt="jwt badge"></img>
               </li>
               <li>
                 <img src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
               </li>
               <li>
-                <img src={"images/badges/styledComponents.svg"} alt="styled-components badge"></img>
-              </li>
-              <li>
                 <img src={"images/badges/jest.svg"} alt="jest badge"></img>
+              </li>
               <li>
                 <img src={"images/badges/net.svg"} alt=".net badge"></img>
               </li>
               <li>
                 <img src={"images/badges/flask.svg"} alt="flask badge"></img>
               </li>
+              <li>
+                <img src={"images/badges/jwt.svg"} alt="jwt badge"></img>
               </li>
             </ul>
           </h4>
         </div>
-        <div id="backendProficiences" className="col-lg-4 col-md-6 align-center resumeProficiences"
+        <div id="resumeServices" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
         onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
-            Services
-            <ul>
-            <li>
+            Services:
+            <ul className="resumeSkillsList">
+              <li>
                 <img src={"images/badges/heroku.svg"} alt="heroku badge"></img>
               </li>
               <li>
