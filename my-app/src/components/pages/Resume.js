@@ -44,17 +44,13 @@ export default function Resume() {
   }
 
   // styles for individual talents
+  // default talent style assumes full-stack
   const defaultTalentStyle = {
-
+    opacity: 1,
+    transitionDuration: '1s',
   }
-  const frontTalentStyle = {
+  const fadeTalentStyle = {
     opacity: 0.2,
-  }
-  const backTalentStyle = {
-
-  }
-  const fullTalentStyle = {
-
   }
 
   // Variables to handle style change
@@ -73,7 +69,8 @@ export default function Resume() {
   // styles for types of talents
   const [ frontEndTalentStyle, setFrontEndTalentStyle ] = useState(defaultTalentStyle); 
   const [ backEndTalentStyle, setBackEndTalentStyle ] = useState(defaultTalentStyle); 
-
+  const [ fullTalentStyle, setFullTalentStyle ] = useState(defaultTalentStyle); 
+  const [ noTalentStyle, setNoTalentStyle ] = useState(defaultTalentStyle); 
   // Variables to determine selection
   const [ frontSelected, setFrontSelected ] = useState(false);
   const [ backSelected, setBackSelected ] = useState(false);
@@ -81,8 +78,9 @@ export default function Resume() {
 
   // Handle changes
   const handleTalentSelection = (talent) => {
+    // 
     if(talent === 'front' && frontSelected === false) {
-      setFrontEndTalentStyle(frontTalentStyle);
+      setFrontEndTalentStyle(fadeTalentStyle);
       setFrontSelected(true);
     } else if (talent === 'front' && frontSelected === true) {
       setFrontEndTalentStyle(defaultTalentStyle);
@@ -211,13 +209,13 @@ export default function Resume() {
                 <img style={frontEndTalentStyle} src={"images/badges/CSS3.svg"} alt="CSS-3 badge"></img>
               </li>
               <li>
-                <img style={frontEndTalentStyle} src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
+                <img style={fullTalentStyle} src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
               </li>
               <li>
-                <img style={frontEndTalentStyle} src={"images/badges/python.svg"} alt="python badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/python.svg"} alt="python badge"></img>
               </li>
               <li>
-                <img style={frontEndTalentStyle} src={"images/badges/java.svg"} alt="java badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/java.svg"} alt="java badge"></img>
               </li>
             </ul>
           </h4>
@@ -230,25 +228,25 @@ export default function Resume() {
             Databases/ORM/ Related:
             <ul className="resumeSkillsList">
               <li>
-                <img src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
               </li>
               <li>
-                <img src={"images/badges/sequelize.svg"} alt="sequelize badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/sequelize.svg"} alt="sequelize badge"></img>
               </li>
               <li>
-                <img src={"images/badges/mongoDB.svg"} alt="mongoDB badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/mongoDB.svg"} alt="mongoDB badge"></img>
               </li>
               <li>
-                <img src={"images/badges/mongoose.svg"} alt="mongoose badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/mongoose.svg"} alt="mongoose badge"></img>
               </li>
               <li>
-                <img src={"images/badges/graphQL.svg"} alt="graphQL badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/graphQL.svg"} alt="graphQL badge"></img>
               </li>
               <li>
-                <img src={"images/badges/apolloGraphQL.svg"} alt="apollo-graphQL badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/apolloGraphQL.svg"} alt="apollo-graphQL badge"></img>
               </li>
               <li>
-                <img src={"images/badges/RESTAPI.svg"} alt="REST API badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/RESTAPI.svg"} alt="REST API badge"></img>
               </li>
             </ul>
           </h4>
@@ -261,13 +259,13 @@ export default function Resume() {
             Packages/ Frameworks:
             <ul className="resumeSkillsList">
               <li>
-                <img src={"images/badges/express.svg"} alt="express.js badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/express.svg"} alt="express.js badge"></img>
               </li>
               <li>
                 <img style={frontEndTalentStyle} src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
               </li>
               <li>
-                <img src={"images/badges/jest.svg"} alt="jest badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/jest.svg"} alt="jest badge"></img>
               </li>
               <li>
                 <img style={frontEndTalentStyle} src={"images/badges/net.svg"} alt=".net badge"></img>
@@ -276,7 +274,7 @@ export default function Resume() {
                 <img style={frontEndTalentStyle} src={"images/badges/flask.svg"} alt="flask badge"></img>
               </li>
               <li>
-                <img src={"images/badges/jwt.svg"} alt="jwt badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/jwt.svg"} alt="jwt badge"></img>
               </li>
             </ul>
           </h4>
@@ -289,10 +287,10 @@ export default function Resume() {
             Applications:
             <ul className="resumeSkillsList">
               <li>
-                <img src={"images/badges/heroku.svg"} alt="heroku badge"></img>
+                <img style={noTalentStyle} src={"images/badges/heroku.svg"} alt="heroku badge"></img>
               </li>
               <li>
-                <img src={"images/badges/gitHub.svg"} alt="github badge"></img>
+                <img style={noTalentStyle} src={"images/badges/gitHub.svg"} alt="github badge"></img>
               </li>
             </ul>
           </h4>
