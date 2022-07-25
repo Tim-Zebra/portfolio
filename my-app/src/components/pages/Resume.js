@@ -81,11 +81,11 @@ export default function Resume() {
   // main function
   const handleTalentSelection = (talent) => {
     // confirms only one button is selected/active
-    if(talent === 'front' && backSelected === false) {
+    if(talent === 'front') {
       handleFrontSelection();
     } 
     // confirms only one button is selected/active
-    else if (talent === 'back' && frontSelected === false) {
+    else if (talent === 'back') {
       handleBackSelection();
     } 
     // confirms full stack selection, also includes if both front and back end buttons are activated
@@ -98,27 +98,49 @@ export default function Resume() {
   // Handles front button pressed
   const handleFrontSelection = () => {
     if(frontSelected === false) {
-      setBackEndTalentStyle(fadeTalentStyle);
       setFrontSelected(true);
+      setFrontEndTalentStyle(defaultTalentStyle);
+      setBackSelected(false);
+      setBackEndTalentStyle(fadeTalentStyle);
+      setNoTalentStyle(fadeTalentStyle);
     } else if (frontSelected === true) {
       setBackEndTalentStyle(defaultTalentStyle);
       setFrontSelected(false);
+      setNoTalentStyle(defaultTalentStyle);
     }
   }
   // Handles back button pressed
   const handleBackSelection = () => {
     if(backSelected === false) {
-      setFrontEndTalentStyle(fadeTalentStyle);
       setBackSelected(true);
+      setBackEndTalentStyle(defaultTalentStyle);
+      setFrontSelected(false);
+      setFrontEndTalentStyle(fadeTalentStyle);
+      setNoTalentStyle(fadeTalentStyle);
     } else if (backSelected === true) {
       setFrontEndTalentStyle(defaultTalentStyle);
       setBackSelected(false);
+      setNoTalentStyle(defaultTalentStyle);
     }
   }
 
   // Handles full button pressed
   const handleFullSelection = () => {
-
+    if(fullSelected === false) {
+      setFrontEndTalentStyle(defaultTalentStyle);
+      setBackEndTalentStyle(defaultTalentStyle);
+      setFrontSelected(false);
+      setBackSelected(false);
+      setFullSelected(true);
+      setNoTalentStyle(fadeTalentStyle);
+    } else if (fullSelected === true) {
+      setFrontEndTalentStyle(defaultTalentStyle);
+      setBackEndTalentStyle(defaultTalentStyle);
+      setNoTalentStyle(defaultTalentStyle);
+      setBackSelected(false);
+      setFrontSelected(false);
+      setFullSelected(false);
+    }
   }
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
