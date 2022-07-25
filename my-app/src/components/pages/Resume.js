@@ -24,8 +24,11 @@ const profStyle = {
 
 // Variables to handle style change
 const [ resumeStyle, setResumeStyle] = useState(noStyle);
-const [ frontendProfStyle, setfrontendProfStyle] = useState(noStyle);
-const [ backendProfStyle, setbackendProfStyle] = useState(noStyle);
+const [ librariesRuntimesStyle, setLibrariesRuntimesStyle] = useState(noStyle);
+const [ languagesStyle, setLanguagesStyle] = useState(noStyle);
+const [ databasesORMRelatedStyle, setDatabasesORMRelatedStyle] = useState(noStyle);
+const [ packagesFrameworksStyle, setPackagesFrameworksStyle] = useState(noStyle);
+const [ servicesStyle, setServicesStyle] = useState(noStyle);
 
 // function to handle resume style change
 const resumeStyleChangeActive = () => {
@@ -37,21 +40,48 @@ const resumeStyleChangeInactive = () => {
 }
 
 // Front end section mouse activity style change
-const frontEndProfActive = () => {
-  setfrontendProfStyle(profStyle);
+const librariesRuntimesActive = () => {
+  setLibrariesRuntimesStyle(profStyle);
 }
 
-const backEndProfInactive = () => {
-  setbackendProfStyle(noStyle);
+const librariesRuntimesInactive = () => {
+  setLibrariesRuntimesStyle(noStyle);
 }
 
 // Backend section mouse activity style change
-const backEndProfActive = () => {
-  setbackendProfStyle(profStyle);
+const languagesActive = () => {
+  setLanguagesStyle(profStyle);
 }
 
-const frontEndProfInactive = () => {
-  setfrontendProfStyle(noStyle);
+const languagesInactive = () => {
+  setLanguagesStyle(noStyle);
+}
+
+// Backend section mouse activity style change
+const databasesORMRelatedActive = () => {
+  setDatabasesORMRelatedStyle(profStyle);
+}
+
+const databasesORMRelatedInactive = () => {
+  setDatabasesORMRelatedStyle(noStyle);
+}
+
+// Backend section mouse activity style change
+const packagesFrameworksActive = () => {
+  setPackagesFrameworksStyle(profStyle);
+}
+
+const packagesFrameworksInactive = () => {
+  setPackagesFrameworksStyle(noStyle);
+}
+
+// Backend section mouse activity style change
+const servicesActive = () => {
+  setServicesStyle(profStyle);
+}
+
+const servicesInactive = () => {
+  setServicesStyle(noStyle);
 }
 
   return (
@@ -60,12 +90,17 @@ const frontEndProfInactive = () => {
         <h1>Resume</h1>
         <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
+      <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
+        <h2 className='col-4'>Front-End Talents</h2>
+        <h2 className='col-4'>Full-Stack Talents</h2>
+        <h2 className='col-4'>Back-End Talents</h2>
+      </div>
       <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
-        <div id="resumeLibrariesRuntimes" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); frontEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); frontEndProfInactive();}}
-        style={frontendProfStyle}>
-          <h4>
+        <div id="resumeLibrariesRuntimes" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); librariesRuntimesActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
+        style={librariesRuntimesStyle}>
+          <h4 className="resumeSkillsHeader">
             Libraries/Runtimes:
             <ul className="resumeSkillsList">
               <li>
@@ -83,11 +118,11 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="resumeLanguages" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
-        style={backendProfStyle}>
-          <h4>
+        <div id="resumeLanguages" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); languagesActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); languagesInactive();}}
+        style={languagesStyle}>
+          <h4 className="resumeSkillsHeader">
             Languages:
             <ul className="resumeSkillsList">
               <li>
@@ -111,12 +146,12 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="resumeDatabasesORMRelated" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
-        style={backendProfStyle}>
-          <h4>
-            Databases/ORM/Related:
+        <div id="resumeDatabasesORMRelated" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); databasesORMRelatedActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); databasesORMRelatedInactive();}}
+        style={databasesORMRelatedStyle}>
+          <h4 className="resumeSkillsHeader">
+            Databases/ORM/ Related:
             <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
@@ -142,12 +177,12 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="resumePackagesFrameworks" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
-        style={backendProfStyle}>
-          <h4>
-            Packages/Frameworks:
+        <div id="resumePackagesFrameworks" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); packagesFrameworksActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); packagesFrameworksInactive();}}
+        style={packagesFrameworksStyle}>
+          <h4 className="resumeSkillsHeader">
+            Packages/ Frameworks:
             <ul className="resumeSkillsList">
               <li>
                 <img src={"images/badges/express.svg"} alt="express.js badge"></img>
@@ -170,11 +205,11 @@ const frontEndProfInactive = () => {
             </ul>
           </h4>
         </div>
-        <div id="resumeServices" className="d-flex justify-content-around col-12 col-md-2 resumeProficiences"
-        onMouseEnter={() => {resumeStyleChangeActive(); backEndProfActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
-        style={backendProfStyle}>
-          <h4>
+        <div id="resumeServices" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        onMouseEnter={() => {resumeStyleChangeActive(); servicesActive();}}
+        onMouseLeave={() => {resumeStyleChangeInactive(); servicesInactive();}}
+        style={servicesStyle}>
+          <h4 className="resumeSkillsHeader">
             Services:
             <ul className="resumeSkillsList">
               <li>

@@ -4,8 +4,20 @@
   margin-left:0px;
 }
 
-.resumeProficiences {
+#resumeHeading {
+  margin-bottom: 100px;
+}
+
+#resumeSubHeadingTalents {
+  margin-bottom: 100px;
+}
+
+.resumeProficiencies {
   border: blue dotted 2px;
+}
+
+.resumeSkillsHeader {
+  font-size: 40px;
 }
 
 .resumeSkillsList {
@@ -45,7 +57,5 @@
 
 /* Phone/Mobile */
 @media only screen and (max-width: 450px) {
-  section {
-    margin:0px;
-  }
+
 }
