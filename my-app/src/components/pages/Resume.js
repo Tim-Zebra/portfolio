@@ -51,6 +51,7 @@ export default function Resume() {
   }
   const fadeTalentStyle = {
     opacity: 0.2,
+    transitionDuration: '1s',
   }
 
   // Variables to handle style change
@@ -76,18 +77,50 @@ export default function Resume() {
   const [ backSelected, setBackSelected ] = useState(false);
   const [ fullSelected, setFullSelected ] = useState(false);
 
-  // Handle changes
+  // Handle talent selection
+  // main function
   const handleTalentSelection = (talent) => {
-    // 
-    if(talent === 'front' && frontSelected === false) {
-      setFrontEndTalentStyle(fadeTalentStyle);
+    // confirms only one button is selected/active
+    if(talent === 'front' && backSelected === false) {
+      handleFrontSelection();
+    } 
+    // confirms only one button is selected/active
+    else if (talent === 'back' && frontSelected === false) {
+      handleBackSelection();
+    } 
+    // confirms full stack selection, also includes if both front and back end buttons are activated
+    else if (talent === 'full') {
+      handleFullSelection();
+    }
+
+  }
+  // modularized buttons
+  // Handles front button pressed
+  const handleFrontSelection = () => {
+    console.log('This happened');
+    if(frontSelected === false) {
+      setBackEndTalentStyle(fadeTalentStyle);
       setFrontSelected(true);
-    } else if (talent === 'front' && frontSelected === true) {
-      setFrontEndTalentStyle(defaultTalentStyle);
+    } else if (frontSelected === true) {
+      setBackEndTalentStyle(defaultTalentStyle);
       setFrontSelected(false);
     }
   }
+  // Handles back button pressed
+  const handleBackSelection = () => {
+    if(backSelected === false) {
+      setFrontEndTalentStyle(fadeTalentStyle);
+      setBackSelected(true);
+    } else if (backSelected === true) {
+      setFrontEndTalentStyle(defaultTalentStyle);
+      setBackSelected(false);
+    }
+  }
 
+  // Handles full button pressed
+  const handleFullSelection = () => {
+
+  }
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
     setResumeStyle(linkStyle);
@@ -265,13 +298,13 @@ export default function Resume() {
                 <img style={frontEndTalentStyle} src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
               </li>
               <li>
-                <img style={backEndTalentStyle} src={"images/badges/jest.svg"} alt="jest badge"></img>
+                <img style={frontEndTalentStyle} src={"images/badges/jest.svg"} alt="jest badge"></img>
               </li>
               <li>
-                <img style={frontEndTalentStyle} src={"images/badges/net.svg"} alt=".net badge"></img>
+                <img style={fullTalentStyle} src={"images/badges/net.svg"} alt=".net badge"></img>
               </li>
               <li>
-                <img style={frontEndTalentStyle} src={"images/badges/flask.svg"} alt="flask badge"></img>
+                <img style={backEndTalentStyle} src={"images/badges/flask.svg"} alt="flask badge"></img>
               </li>
               <li>
                 <img style={backEndTalentStyle} src={"images/badges/jwt.svg"} alt="jwt badge"></img>
