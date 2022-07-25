@@ -85,22 +85,22 @@ const frontEndProfInactive = () => {
             Languages
             <ul>
               <li>
-                <img src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
-              </li>
-              <li>
-                <img src={"images/badges/python.svg"} alt="python badge"></img>
-              </li>
-              <li>
                 <img src={"images/badges/javaScript.svg"} alt="javascript badge"></img>
-              </li>
-              <li>
-                <img src={"images/badges/java.svg"} alt="java badge"></img>
               </li>
               <li>
                 <img src={"images/badges/HTML5.svg"} alt="HTML-5 badge"></img>
               </li>
               <li>
                 <img src={"images/badges/CSS3.svg"} alt="CSS-3 badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/csharp.svg"} alt="c-sharp badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/python.svg"} alt="python badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/java.svg"} alt="java badge"></img>
               </li>
             </ul>
           </h4>
@@ -110,7 +110,7 @@ const frontEndProfInactive = () => {
         onMouseLeave={() => {resumeStyleChangeInactive(); backEndProfInactive();}}
         style={backendProfStyle}>
           <h4>
-            Databases/Realted:
+            Databases/ORM/Related:
             <ul>
             <li>
                 <img src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
@@ -118,20 +118,20 @@ const frontEndProfInactive = () => {
               <li>
                 <img src={"images/badges/sequelize.svg"} alt="sequelize badge"></img>
               </li>
-              <li> and Mongoose :/
+              <li>
                 <img src={"images/badges/mongoDB.svg"} alt="mongoDB badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/mongoose.svg"} alt="mongoose badge"></img>
               </li>
               <li>
                 <img src={"images/badges/graphQL.svg"} alt="graphQL badge"></img>
               </li>
               <li>
-                REST
-              </li>
-              <li>
                 <img src={"images/badges/apolloGraphQL.svg"} alt="apollo-graphQL badge"></img>
               </li>
               <li>
-                <img src={"images/badges/flask.svg"} alt="flask badge"></img>
+                <img src={"images/badges/RESTAPI.svg"} alt="REST API badge"></img>
               </li>
             </ul>
           </h4>
@@ -143,23 +143,29 @@ const frontEndProfInactive = () => {
           <h4>
             Packages/Frameworks:
             <ul>
-            <li>
-                <img src={"images/badges/net.svg"} alt=".net badge"></img>
-              </li>
               <li>
                 <img src={"images/badges/node.svg"} alt="node.js badge"></img>
               </li>
               <li>
-                <img src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
+                <img src={"images/badges/express.svg"} alt="express.js badge"></img>
               </li>
               <li>
                 <img src={"images/badges/jwt.svg"} alt="jwt badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/bootstrap.svg"} alt="bootstrap badge"></img>
               </li>
               <li>
                 <img src={"images/badges/styledComponents.svg"} alt="styled-components badge"></img>
               </li>
               <li>
                 <img src={"images/badges/jest.svg"} alt="jest badge"></img>
+              <li>
+                <img src={"images/badges/net.svg"} alt=".net badge"></img>
+              </li>
+              <li>
+                <img src={"images/badges/flask.svg"} alt="flask badge"></img>
+              </li>
               </li>
             </ul>
           </h4>
