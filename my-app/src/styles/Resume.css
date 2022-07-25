@@ -13,8 +13,11 @@
 }
 
 .resumeTalentOption {
+  background-color: transparent;
   cursor: pointer;
   padding: 2%;
+  border-radius: 5%;
+  transition: 0.3s;
 }
 
 .resumeTalentOption:hover {

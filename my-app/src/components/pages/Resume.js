@@ -110,6 +110,7 @@ export default function Resume() {
       setNoTalentStyle(defaultTalentStyle);
     }
   }
+
   // Handles back button pressed
   const handleBackSelection = () => {
     if(backSelected === false) {
@@ -206,27 +207,27 @@ export default function Resume() {
         <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
-        <h2 className='col-4'
-        onClick={() => {handleTalentSelection('front');}}
-        style={frontEndButtonStyle}
-        >
-          <text className='resumeTalentOption'>
+        <h2 className='col-4'>
+          <text className='resumeTalentOption'
+            onClick={() => {handleTalentSelection('front');}}
+            style={frontEndButtonStyle}
+          >
             <span style={frontWordStyle}>Front</span>-End Talents
           </text>
         </h2>
-        <h2 className='col-4'
-        onClick={() => {handleTalentSelection('full');}}
-        style={fullStackButtonStyle}
-        >
-          <text className='resumeTalentOption'>
+        <h2 className='col-4 resumeTalentFrame'>
+          <text className='resumeTalentOption'
+            onClick={() => {handleTalentSelection('full');}}
+            style={fullStackButtonStyle}
+          >
             <span style={fullWordStyle}>Full</span>-Stack Talents
           </text>
         </h2>
-        <h2 className='col-4'
-        style={backEndButtonStyle}
-        onClick={() => {handleTalentSelection('back');}}
-        >
-          <text className='resumeTalentOption'>
+        <h2 className='col-4'>
+          <text className='resumeTalentOption'
+            style={backEndButtonStyle}
+            onClick={() => {handleTalentSelection('back');}}
+          >
             <span style={backWordStyle}>Back</span>-End Talents
           </text>
         </h2>
