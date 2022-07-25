@@ -57,9 +57,14 @@ export default function Resume() {
   const [ packagesFrameworksStyle, setPackagesFrameworksStyle] = useState(noStyle);
   const [ applicationsStyle, setApplicationsStyle] = useState(noStyle);
 
-  // Handle changes
-  const handleTalentSelection = () => {
+  // Variables to determine selection
+  const [ frontSelected, setFrontSelected ] = useState(false);
+  const [ backSelected, setBackSelected ] = useState(false);
+  const [ fullSelected, setFullSelected ] = useState(false);
 
+  // Handle changes
+  const handleTalentSelection = (talent) => {
+    
   }
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
@@ -68,6 +73,19 @@ export default function Resume() {
 
   const resumeStyleChangeInactive = () => {
     setResumeStyle(noStyle);
+  }
+
+  // handles changes in Talents
+  const handleFrontClick = (value) => {
+    setFrontSelected(value);
+  }
+
+  const handleBackClick = () => {
+    
+  }
+
+  const handleFullClick = () => {
+    
   }
 
   // talent cards
@@ -124,19 +142,20 @@ export default function Resume() {
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
         <h2 className='col-4'
-        onMouseEnter={() => {resumeStyleChangeActive(); librariesRuntimesActive();}}
-        onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
+        onClick={() => {handleTalentSelection('front');}}
         style={frontEndButtonStyle}
         >
           <span style={frontWordStyle}>Front</span>-End Talents
         </h2>
         <h2 className='col-4'
+        onClick={() => {handleTalentSelection('full');}}
         style={fullStackButtonStyle}
         >
           <span style={fullWordStyle}>Full</span>-Stack Talents
         </h2>
         <h2 className='col-4'
         style={backEndButtonStyle}
+        onClick={() => {handleTalentSelection('back');}}
         >
           <span style={backWordStyle}>Back</span>-End Talents
         </h2>
