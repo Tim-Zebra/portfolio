@@ -12,6 +12,11 @@
   margin-bottom: 100px;
 }
 
+#resumeSubHeadingTalents h2 {
+  border-radius: 100px;
+  outline:none;
+}
+
 .resumeTalentOption {
   background-color: transparent;
   cursor: pointer;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../styles/Resume.css";
 import pdf from '../../assets/resume.pdf';
 
@@ -43,6 +43,21 @@ export default function Resume() {
     transitionDuration: '1s',
   }
 
+  // styles for subheaders
+  const defaultSubHeaderStyle = {
+
+  }
+  const frontSubHeaderFadeIn = {
+    boxShadow: '0px 0px 80px 10px red',
+    backgroundColor: 'rgba(255, 0, 0, 0.199)',
+    height: '1px',
+  }
+
+  const frontSubHeaderFadeOut = {
+    transition: '0.8s',
+    height: '1px',
+  }
+
   // styles for individual talents
   // default talent style assumes full-stack
   const defaultTalentStyle = {
@@ -58,6 +73,9 @@ export default function Resume() {
   // header section
   const [ resumeStyle, setResumeStyle] = useState(noStyle);
   // sub-header section
+  const [ frontSubHeaderStyle, setFrontSubHeaderStyle ] = useState(defaultSubHeaderStyle);
+  const [ fullSubHeaderStyle, setFullSubHeaderStyle ] = useState(defaultSubHeaderStyle);
+  const [ backSubHeaderStyle, setBackSubHeaderStyle ] = useState(defaultSubHeaderStyle);
   const [ frontEndButtonStyle, setFrontEndButtonStyle ] = useState(baseFrontStyle);
   const [ backEndButtonStyle, setBackEndButtonStyle ] = useState(baseBackStyle);
   const [ fullStackButtonStyle, setFullStackButtonStyle ] = useState(baseFullStyle);
@@ -92,11 +110,16 @@ export default function Resume() {
     else if (talent === 'full') {
       handleFullSelection();
     }
-
   }
   // modularized buttons
   // Handles front button pressed
   const handleFrontSelection = () => {
+    setFrontSubHeaderStyle(frontSubHeaderFadeIn);
+    const timer = setTimeout(() => {
+      setFrontSubHeaderStyle(frontSubHeaderFadeOut);
+    }, 1);
+    
+    // Affects talents styling/fading
     if(frontSelected === false) {
       setFrontSelected(true);
       setFrontEndTalentStyle(defaultTalentStyle);
@@ -145,6 +168,11 @@ export default function Resume() {
       setFullSelected(false);
     }
   }
+
+  const frontSubHeaderFade = () => {
+
+  }
+
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
     setResumeStyle(linkStyle);
@@ -200,6 +228,8 @@ export default function Resume() {
     setApplicationsStyle(noStyle);
   }
 
+  // Fade effects for Sub-Header
+
   return (
     <section className="portfolioSection">
       <div id="resumeHeading" className="d-block text-center">
@@ -207,7 +237,9 @@ export default function Resume() {
         <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
-        <h2 className='col-4'>
+        <h2 className='col-4'
+          style={frontSubHeaderStyle}
+        >
           <text className='resumeTalentOption'
             onClick={() => {handleTalentSelection('front');}}
             style={frontEndButtonStyle}
@@ -215,7 +247,9 @@ export default function Resume() {
             <span style={frontWordStyle}>Front</span>-End Talents
           </text>
         </h2>
-        <h2 className='col-4 resumeTalentFrame'>
+        <h2 className='col-4 resumeTalentFrame'
+          style={fullSubHeaderStyle}
+        >
           <text className='resumeTalentOption'
             onClick={() => {handleTalentSelection('full');}}
             style={fullStackButtonStyle}
@@ -223,10 +257,12 @@ export default function Resume() {
             <span style={fullWordStyle}>Full</span>-Stack Talents
           </text>
         </h2>
-        <h2 className='col-4'>
+        <h2 className='col-4'
+          style={backSubHeaderStyle}
+        >
           <text className='resumeTalentOption'
             style={backEndButtonStyle}
-            onClick={() => {handleTalentSelection('back');}}
+            onClick={() => {handleTalentSelection('back'); frontSubHeaderFade();}}
           >
             <span style={backWordStyle}>Back</span>-End Talents
           </text>
