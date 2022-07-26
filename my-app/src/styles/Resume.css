@@ -94,34 +94,34 @@
   }
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1780px) {
+  #resumeHeading {
+    margin-bottom: 60px;
+  }
+
   #resumeSubHeadingTalents {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+  }
+  
+  #resumeBlock {
+    margin-bottom:80px;
   }
 }
 
 /* Medium sized monitors */
 @media only screen and (max-width: 1690px) {
-  #resumeBlock {
-    margin-bottom:80px;
-  }
-
-  #resumeHeading {
-    margin-bottom: 60px;
-  }
-
   .resumeTalentOption {
     width: 80%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  #resumeBlock {
-    margin-bottom:80px;
+  #resumeSubHeadingTalents {
+    margin-bottom: 10px;
   }
 
-  #resumeHeading {
-    margin-bottom: 60px;
+  #resumeBlock {
+    margin-bottom:80px;
   }
 
   .resumeTalentOption {
@@ -131,10 +131,16 @@
 }
 
 /* Laptop screens */
-@media only screen and (max-width: 771px) {
-
+@media only screen and (max-width: 920px) {
+  .resumeTalentOption {
+    font-size: 30px;
+  }
 }
-
+@media only screen and (max-width: 742px) {
+  .resumeTalentOption {
+    font-size: 25px;
+  }
+}
 @media only screen and (max-width: 695px) {  
   #resumeBlock {
     margin-bottom: 0px;
