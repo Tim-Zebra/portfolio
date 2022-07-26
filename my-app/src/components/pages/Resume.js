@@ -149,7 +149,6 @@ export default function Resume() {
       setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 mx-1");
       setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
     } else if (screenWidth < 1400 && screenWidth >= 1200) {
-      console.log('This happened', screenWidth);
       setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
     } else if (screenWidth < 1200) {
       setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
@@ -316,8 +315,8 @@ export default function Resume() {
         <h1>Resume</h1>
         <div id="resumeDownloadDiv">Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
-      <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
-        <h2 className='col-4'
+      <div id="resumeSubHeadingTalents" className="d-flex row justify-content-around text-center">
+        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
           style={frontSubHeaderStyle}
         >
           <div className='resumeTalentOption'
@@ -327,17 +326,17 @@ export default function Resume() {
             <span style={frontWordStyle}>Front</span>-End Talents
           </div>
         </h2>
-        <h2 className='col-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
           style={fullSubHeaderStyle}
         >
           <div className='resumeTalentOption'
             onClick={() => {handleTalentSelection('full');}}
             style={fullStackButtonStyle}
           >
-            <span style={fullWordStyle}>Full</span>-Stack Talents
+            <span style={fullWordStyle}>Full</span>-Stack Talents 
           </div>
         </h2>
-        <h2 className='col-4'
+        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
           style={backSubHeaderStyle}
         >
           <div className='resumeTalentOption'
