@@ -19,7 +19,7 @@ export default function Resume() {
     if(screenWidth >= 1800) {
       setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
     } else if(screenWidth < 1800) {
-      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-5");
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 ml-2 my-2");
     }
   }
   // Styles for resume

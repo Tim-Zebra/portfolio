@@ -1,8 +1,4 @@
 /* Section: Resume */
-#resumeBlock {
-  margin-left:0px;
-}
-
 #resumeHeading {
   margin-bottom: 100px;
 }
@@ -33,6 +29,10 @@
 
 .resumeTalentOption:active {
   transition: 0s;  box-shadow: 0px 0px 0px 0px grey;
+}
+
+#resumeBlock {
+  margin-left:0px;
 }
 
 .resumeProficiencies {
@@ -79,7 +79,12 @@
 }
 
 @media only screen and (max-width: 1960px) {
-
+  .resumeSkillsHeader {
+    font-size: 32px;
+  }
+  #resumeBlock {
+    margin-bottom:110px;
+  }
 }
 
 @media only screen and (max-width: 1800px) {
