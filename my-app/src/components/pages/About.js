@@ -147,11 +147,11 @@ export default function About() {
           onMouseOver={() => {setParagraph1('red')}}
           onMouseLeave={() => {setParagraph1('black')}}
         >
-          My name is Timothy Zalewski. I am a Full-Stack Web Developer in addition to having my Doctorate of Pharmacy.
+          My name is Timothy Zalewski. I am a Full-Stack Developer in addition to having my Doctorate of Pharmacy.
           "Wait what!? How did that come to be?" My career originally began in pharmacy where
           I had the opportunity to help patients and customers navigate the ambiguity of our health care market.
           As I continued to grow and challenge myself others began referring to me as a subject matter expert and top performer. 
-          I slide into the role of pharmacy manager and got to lead a lot of cool stuff including leading the COVID-19 vaccine role out at my store.
+          I slid into the role of pharmacy manager and even led a lot of cool stuff including leading the COVID-19 vaccine role out at my store.
         </p>
         <p className="col-12 aboutParagraphs"
           style={paragraph2Boarder}
@@ -160,7 +160,7 @@ export default function About() {
         >
           As time went on, I found myself looking into more avenues for creativity and innovation.
           I began researching different options and discovered tech has many opportunities that highly emphasize both of these aspects.
-          It is also worth noting that I had previous coding experience when I made windows batch scripts for Call of Duty 1 in middle school and even created 4 player pong using JAVA during high-school in AP-CompSci.
+          It is also worth noting that I had previous coding experience. In middle school I made windows batch scripts for Call of Duty 1 that made my screen name come to life and do all sorts of cool things. I even created 4 player pong using JAVA in high-school during AP-CompSci.
           I had so much fun working on these projects, and was excited to find a career where this could become my daily reality.
           This is when I began to seriously consider a career switch. I spent hours talking with friends and working with JavaScript. And you know what?
           I absolutely loved it! I looked into boot camps and decided <a href="https://techbootcamps.utexas.edu/coding/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">UT Austin's Full-Stack Web Development</a> course would be a great fit for me.
@@ -170,12 +170,12 @@ export default function About() {
           onMouseOver={() => {setParagraph3('limegreen')}}
           onMouseLeave={() => {setParagraph3('black')}}
         >
-          Fastforward through the next 12 weeks of intensive, Full-Stack, fast-paced web developement and here I am graduated as a Full-Stack Web Developer!
+          Fastforward through the next 12 weeks of intensive, full-stack, fast-paced web developement and here I am graduated as a Full-Stack Web Developer!
           I learned so much during that cramped time frame, in which I comitted about 60-80 hours per week coding.
           We focused heavily on JavaScript which includes: Express.js, Node.js, and React.js. 
           The boot camp also offered post course work, where I took it upon myself to learn Python and C#.
           Along the way I met some great people, formed some new friendships, and enjoyed getting to network with other techies.
-          {'(Always down for a game of Age of Empires 2, Zombicide, or even a quick pick-up soccer game!)'}
+          {'(Always down for a game of Age of Empires 2, Zombicide, or even a quick pick-up soccer scrimmage!)'}
           I am excited to see how the futue of my career developes, and look forward to experiencing all the tech field has to offer.
         </p>
         <p className="col-12 aboutParagraphs"
@@ -183,12 +183,12 @@ export default function About() {
           onMouseOver={() => {setParagraph4('gold')}}
           onMouseLeave={() => {setParagraph4('black')}}
         >
-          What keeps coding so interesting for me is how the entire process is like putting together a puzzle or playing a strategy game.
-          I love doing puzzles, recognizing patterns, and applying unique yet crafted solutions towards a particular challenge.
+          What ensures longevity for my coding career is how the entire coding process is like putting together a puzzle or playing a strategy game.
+          I have always loved putting together puzzles, recognizing patterns, and applying unique yet crafted solutions towards a particular challenge.
           It is like "getting payed to play games", and I love it!
           For more about me,
           be sure to send me a connection request on <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
-          to see where I started, who I am, and how far I have come in such a short amount of time.   
+          to see where I started, who I am, and how far I have come in such a short amount of time.
         </p>
       </div>
     </section>
