@@ -256,6 +256,7 @@ export default function Resume() {
   // talent cards
   // librariesRuntimes section mouse activity style change
   const librariesRuntimesActive = () => {
+    if(window.visualViewport.width + 17 > 992)
     setLibrariesRuntimesStyle(profStyle);
   }
 
@@ -265,6 +266,7 @@ export default function Resume() {
 
   // languages section mouse activity style change
   const languagesActive = () => {
+    if(window.visualViewport.width + 17 > 992)
     setLanguagesStyle(profStyle);
   }
 
@@ -274,6 +276,7 @@ export default function Resume() {
 
   // databasesORMRelated section mouse activity style change
   const databasesORMRelatedActive = () => {
+    if(window.visualViewport.width + 17 > 992)
     setDatabasesORMRelatedStyle(profStyle);
   }
 
@@ -283,6 +286,7 @@ export default function Resume() {
 
   // packagesFrameworks section mouse activity style change
   const packagesFrameworksActive = () => {
+    if(window.visualViewport.width + 17 > 992)
     setPackagesFrameworksStyle(profStyle);
   }
 
@@ -292,6 +296,7 @@ export default function Resume() {
 
   // applications section mouse activity style change
   const applicationsActive = () => {
+    if(window.visualViewport.width + 17 > 992)
     setApplicationsStyle(profStyle);
   }
 
@@ -305,7 +310,7 @@ export default function Resume() {
     <section className="portfolioSection">
       <div id="resumeHeading" className="d-block text-center">
         <h1>Resume</h1>
-        <div>Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
+        <div id="resumeDownloadDiv">Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
         <h2 className='col-4'
