@@ -96,7 +96,10 @@
 }
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {
-
+  #resumeSubHeadingTalents h2 {
+    width: 20px;
+    outline:none;
+  }
 }
 
 /* Laptop screens */
