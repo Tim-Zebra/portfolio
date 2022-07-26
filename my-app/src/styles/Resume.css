@@ -1,6 +1,6 @@
 /* Section: Resume */
 #resumeHeading {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 
 #resumeDownloadDiv {
@@ -24,7 +24,7 @@
   border-radius: 5%;
   transition: 0.3s;
   position: relative;
-  top: -20px;
+  top: -25px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
