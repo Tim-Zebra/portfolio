@@ -3,7 +3,7 @@ import "../../styles/Resume.css";
 import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
-  // Styles for resume
+  // Styles and constants for useStates
   // style reset
   const noStyle = {
     transitionDuration: '0.5s',
@@ -30,9 +30,11 @@ export default function Resume() {
   const frontWordStyle = {
     color: 'rgb(250, 67, 67)',
   }
+
   const backWordStyle = {
     color: 'rgb(101, 196, 255)',
   }
+
   const fullWordStyle = {
     color: 'rgb(171, 72, 171)',
   }
@@ -98,7 +100,7 @@ export default function Resume() {
   const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
   const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
 
-  // Variables to handle style change
+  // Variables to handle style change with "useState"
   // header section
   const [ resumeStyle, setResumeStyle] = useState(noStyle);
   // sub-header section
@@ -119,15 +121,16 @@ export default function Resume() {
   const [ backEndTalentStyle, setBackEndTalentStyle ] = useState(defaultTalentStyle); 
   const [ fullTalentStyle, setFullTalentStyle ] = useState(defaultTalentStyle); 
   const [ noTalentStyle, setNoTalentStyle ] = useState(defaultTalentStyle); 
-  // Variables to determine selection
+  // variables to determine selection
   const [ frontSelected, setFrontSelected ] = useState(false);
   const [ backSelected, setBackSelected ] = useState(false);
   const [ fullSelected, setFullSelected ] = useState(false);
-
+  // updates flex box for talent cards
   const [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
   // Updates the headings of the cards depending on screenwidth
   const [ resumeSkillsHeaderText, setResumeSkillsHeaderText ] = useState(defaultResumeSkillsHeaderText);
 
+  // listens for window change
   useEffect(() => {
     window.addEventListener("resize", updateFlexBox);
     return () => {
@@ -135,8 +138,9 @@ export default function Resume() {
     };
   })
 
-  // +17 to adjust for some off set between window object and actual screen width
+  // updates display
   const updateFlexBox = () => {
+    // +17 to adjust for some off set between window object and actual screen width
     const screenWidth = window.visualViewport.width+17;
     if(screenWidth >= 1800) {
       setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
@@ -151,9 +155,9 @@ export default function Resume() {
       setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
     }
   }
-  
-  // Handle talent selection
-  // main function
+
+  // Handle Events/Actions
+  // main function - talent section
   const handleTalentSelection = (talent) => {
     // confirms only one button is selected/active
     if(talent === 'front') {
@@ -168,8 +172,9 @@ export default function Resume() {
       handleFullSelection();
     }
   }
-  // modularized buttons
-  // Handles front button pressed
+
+  // Front/Back/Full Talent Buttons
+  // front button
   const handleFrontSelection = () => {
     // Fade effect on click
     setFrontSubHeaderStyle(frontSubHeaderFadeIn);
@@ -192,7 +197,7 @@ export default function Resume() {
     }
   }
 
-  // Handles back button pressed
+  // back button
   const handleBackSelection = () => {
     // Fade effect on click
     setBackSubHeaderStyle(backSubHeaderFadeIn);
@@ -215,7 +220,7 @@ export default function Resume() {
     }
   }
 
-  // Handles full button pressed
+  // full button
   const handleFullSelection = () => {
     // Fade effect on click
     setFullSubHeaderStyle(fullSubHeaderFadeIn);
@@ -241,7 +246,8 @@ export default function Resume() {
     }
   }
 
-  // function to handle resume style change
+  // Resume Style Change on Mouse Hover
+  // header/resume download here
   const resumeStyleChangeActive = () => {
     setResumeStyle(linkStyle);
   }
@@ -250,11 +256,14 @@ export default function Resume() {
     setResumeStyle(noStyle);
   }
 
-  // talent cards
+  // Talent cards
   // librariesRuntimes section mouse activity style change
   const librariesRuntimesActive = () => {
-    if(window.visualViewport.width + 17 > 992)
-    setLibrariesRuntimesStyle(profStyle);
+    if(window.visualViewport.width + 17 > 992) {
+      let newStyle = profStyle;
+      setLibrariesRuntimesStyle(newStyle);
+    }
+
   }
 
   const librariesRuntimesInactive = () => {
