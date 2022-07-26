@@ -1,6 +1,6 @@
 /* Section: Resume */
 #resumeHeading {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 #resumeDownloadDiv {
@@ -96,49 +96,27 @@
 }
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {
-  #resumeSubHeadingTalents h2 div {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-  }
+
 }
 
 /* Laptop screens */
 @media only screen and (max-width: 771px) {
-  #resumeHeading {
-    margin-bottom: 20px;
-  }
-
-  .resumeTalentFrame {
-    height: 100px;
-    width: 100%;
-  }
-  #resumeSubHeadingTalents {
-    height: 100px;
-    width: 100%;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .resumeTalentOption {
-    height: 100px;
-    width: 100%;
-  }
-
-  #resumeSubHeadingTalents h2 {
-    width: 300px;
-    height: 100px;
-  }
-  #resumeSubHeadingTalents h2 div {
-    width: 300px;
-    height: 100px;
-  }
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 695px) {  
+  #resumeBlock {
+    margin-bottom: 0px;
+  }
 
+  #resumeSubHeadingTalents {
+    display: none!important;
+    width: 10px;
+  }
+
+  #resumeHeading {
+    margin-bottom: 40px;
+  }
 }
 
 /* Phone/Mobile */

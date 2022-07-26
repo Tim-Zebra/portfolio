@@ -82,7 +82,7 @@ export default function Resume() {
   };
 
   // sets flex box for Talents
-  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-12 col-lg-5";
+  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-12 col-md-5 col-lg-5";
 
   // styles for individual talents
   // default talent style assumes full-stack
@@ -150,7 +150,11 @@ export default function Resume() {
       setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
     } else if (screenWidth < 1400 && screenWidth >= 1200) {
       setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
-    } else if (screenWidth < 1200) {
+    } else if (screenWidth < 1200 && screenWidth >= 890) {
+      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+    } else if (screenWidth < 890 && screenWidth >= 768) {
+      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+    } else if (screenWidth < 768) {
       setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
     }
   }
@@ -315,8 +319,8 @@ export default function Resume() {
         <h1>Resume</h1>
         <div id="resumeDownloadDiv">Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
-      <div id="resumeSubHeadingTalents" className="d-flex row justify-content-around text-center">
-        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
+      <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
+        <h2 className='col-12 col-sm-4 resumeTalentFrame'
           style={frontSubHeaderStyle}
         >
           <div className='resumeTalentOption'
@@ -326,7 +330,7 @@ export default function Resume() {
             <span style={frontWordStyle}>Front</span>-End Talents
           </div>
         </h2>
-        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-4 resumeTalentFrame'
           style={fullSubHeaderStyle}
         >
           <div className='resumeTalentOption'
@@ -336,7 +340,7 @@ export default function Resume() {
             <span style={fullWordStyle}>Full</span>-Stack Talents 
           </div>
         </h2>
-        <h2 className='col-12 col-sm-12 col-md-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-4 resumeTalentFrame'
           style={backSubHeaderStyle}
         >
           <div className='resumeTalentOption'
