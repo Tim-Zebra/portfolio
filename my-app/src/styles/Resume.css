@@ -23,6 +23,8 @@
   padding: 2%;
   border-radius: 5%;
   transition: 0.3s;
+  position: relative;
+  top: -10px;
 }
 
 .resumeTalentOption:hover {
