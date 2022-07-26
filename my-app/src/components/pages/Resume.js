@@ -346,7 +346,7 @@ export default function Resume() {
         <div id="resumeDownloadDiv">Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
-        <h2 className='col-12 col-sm-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-4'
           style={frontSubHeaderStyle}
         >
           <div className='resumeTalentOption'
@@ -356,7 +356,7 @@ export default function Resume() {
             <span style={frontWordStyle}>Front</span>-End Talents
           </div>
         </h2>
-        <h2 className='col-12 col-sm-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-4'
           style={fullSubHeaderStyle}
         >
           <div className='resumeTalentOption'
@@ -366,7 +366,7 @@ export default function Resume() {
             <span style={fullWordStyle}>Full</span>-Stack Talents 
           </div>
         </h2>
-        <h2 className='col-12 col-sm-4 resumeTalentFrame'
+        <h2 className='col-12 col-sm-4'
           style={backSubHeaderStyle}
         >
           <div className='resumeTalentOption'
