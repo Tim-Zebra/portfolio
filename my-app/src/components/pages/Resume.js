@@ -3,40 +3,6 @@ import "../../styles/Resume.css";
 import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
-  // EXPIRIMENT :D 
-  // Goal is to change flex boxes based on media width
-  // Set base to adjust on flex box.
-  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-12 col-lg-5";
-  const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
-  const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
-  const [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
-  // Updates the headings of the cards depending on screenwidth
-  const [ resumeSkillsHeaderText, setResumeSkillsHeaderText ] = useState(defaultResumeSkillsHeaderText);
-
-  useEffect(() => {
-    window.addEventListener("resize", updateFlexBox);
-    return () => {
-      window.removeEventListener("resize", updateFlexBox);
-    };
-  })
-
-  // +17 to adjust for some off set between window object and actual screen width
-  const updateFlexBox = () => {
-    const screenWidth = window.visualViewport.width+17;
-    if(screenWidth >= 1800) {
-      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
-      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
-    } else if(screenWidth < 1800 && screenWidth >= 1400) {
-      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 mx-1");
-      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
-    } else if (screenWidth < 1400 && screenWidth >= 1200) {
-      console.log('This happened', screenWidth);
-      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
-    } else if (screenWidth < 1200) {
-      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
-    }
-  }
-
   // Styles for resume
   // style reset
   const noStyle = {
@@ -113,6 +79,9 @@ export default function Resume() {
     height: '1px',
   };
 
+  // sets flex box for Talents
+  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-12 col-lg-5";
+
   // styles for individual talents
   // default talent style assumes full-stack
   const defaultTalentStyle = {
@@ -124,6 +93,10 @@ export default function Resume() {
     opacity: 0.2,
     transitionDuration: '1s',
   };
+
+  // Display names for Headers
+  const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
+  const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
 
   // Variables to handle style change
   // header section
@@ -151,6 +124,34 @@ export default function Resume() {
   const [ backSelected, setBackSelected ] = useState(false);
   const [ fullSelected, setFullSelected ] = useState(false);
 
+  const [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
+  // Updates the headings of the cards depending on screenwidth
+  const [ resumeSkillsHeaderText, setResumeSkillsHeaderText ] = useState(defaultResumeSkillsHeaderText);
+
+  useEffect(() => {
+    window.addEventListener("resize", updateFlexBox);
+    return () => {
+      window.removeEventListener("resize", updateFlexBox);
+    };
+  })
+
+  // +17 to adjust for some off set between window object and actual screen width
+  const updateFlexBox = () => {
+    const screenWidth = window.visualViewport.width+17;
+    if(screenWidth >= 1800) {
+      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
+    } else if(screenWidth < 1800 && screenWidth >= 1400) {
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 mx-1");
+      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+    } else if (screenWidth < 1400 && screenWidth >= 1200) {
+      console.log('This happened', screenWidth);
+      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+    } else if (screenWidth < 1200) {
+      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+    }
+  }
+  
   // Handle talent selection
   // main function
   const handleTalentSelection = (talent) => {
@@ -240,10 +241,6 @@ export default function Resume() {
     }
   }
 
-  const frontSubHeaderFade = () => {
-
-  }
-
   // function to handle resume style change
   const resumeStyleChangeActive = () => {
     setResumeStyle(linkStyle);
@@ -304,8 +301,6 @@ export default function Resume() {
     setApplicationsStyle(noStyle);
   }
 
-  // Fade effects for Sub-Header
-
   return (
     <section className="portfolioSection">
       <div id="resumeHeading" className="d-block text-center">
@@ -338,7 +333,7 @@ export default function Resume() {
         >
           <div className='resumeTalentOption'
             style={backEndButtonStyle}
-            onClick={() => {handleTalentSelection('back'); frontSubHeaderFade();}}
+            onClick={() => {handleTalentSelection('back');}}
           >
             <span style={backWordStyle}>Back</span>-End Talents
           </div>
