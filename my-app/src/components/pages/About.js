@@ -159,7 +159,9 @@ export default function About() {
           onMouseLeave={() => {setParagraph2('black')}}
         >
           As time went on, I found myself looking into more avenues for creativity and innovation.
-          I began researching different options and discovered tech has many opportunities that highly emphasis both of these aspects.
+          I began researching different options and discovered tech has many opportunities that highly emphasize both of these aspects.
+          It is also worth noting that I had previous coding experience when I made windows batch scripts for Call of Duty 1 in middle school and even created 4 player pong using JAVA during high-school in AP-CompSci.
+          I had so much fun working on these projects, and was excited to find a career where this could become my daily reality.
           This is when I began to seriously consider a career switch. I spent hours talking with friends and working with JavaScript. And you know what?
           I absolutely loved it! I looked into boot camps and decided <a href="https://techbootcamps.utexas.edu/coding/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">UT Austin's Full-Stack Web Development</a> course would be a great fit for me.
         </p>
@@ -183,9 +185,9 @@ export default function About() {
         >
           What keeps coding so interesting for me is how the entire process is like putting together a puzzle or playing a strategy game.
           I love doing puzzles, recognizing patterns, and applying unique yet crafted solutions towards a particular challenge.
-          It is like getting played to play games, and I love it!
+          It is like "getting payed to play games", and I love it!
           For more about me,
-          be sure to connect with me on <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
+          be sure to send me a connection request on <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
           to see where I started, who I am, and how far I have come in such a short amount of time.   
         </p>
       </div>
