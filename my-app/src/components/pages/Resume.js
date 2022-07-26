@@ -15,7 +15,12 @@ export default function Resume() {
     };
   })
   const updateFlexBox = () => {
-    
+
+    const screenWidth = window.visualViewport.width;
+    console.log('This happened', screenWidth);
+    if(screenWidth < 1800) {
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3");
+    }
   }
   // Styles for resume
   // style reset
