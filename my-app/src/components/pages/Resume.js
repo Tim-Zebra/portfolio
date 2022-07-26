@@ -58,8 +58,8 @@ export default function Resume() {
   };
 
   const backSubHeaderFadeIn = {
-    boxShadow: '0px 0px 80px 10px red',
-    backgroundColor: 'rgba(255, 0, 0, 0.199)',
+    boxShadow: '0px 0px 80px 10px rgb(70, 183, 254)',
+    backgroundColor: 'rgba(70, 183, 254, 0.199)',
     height: '1px',
   };
 
