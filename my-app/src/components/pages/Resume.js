@@ -211,6 +211,10 @@ export default function Resume() {
       setFrontSubHeaderStyle(frontSubHeaderFadeOut);
     }, 1);
 
+    const timer2 = setTimeout(() => {
+      setFrontSubHeaderStyle(defaultSubHeaderStyle);
+    }, 1000);
+
     // Affects talents styling/fading
     if(frontSelected === false) {
       setFrontSelected(true);
@@ -234,6 +238,10 @@ export default function Resume() {
       setBackSubHeaderStyle(backSubHeaderFadeOut);
     }, 1);
 
+    const timer2 = setTimeout(() => {
+      setBackSubHeaderStyle(defaultSubHeaderStyle);
+    }, 1000);
+
     // Affects talents styling/fading
     if(backSelected === false) {
       setBackSelected(true);
@@ -256,6 +264,10 @@ export default function Resume() {
     const timer = setTimeout(() => {
       setFullSubHeaderStyle(fullSubHeaderFadeOut);
     }, 1);
+
+    const timer2 = setTimeout(() => {
+      setFullSubHeaderStyle(defaultSubHeaderStyle);
+    }, 1000);
 
     // Affects talents styling/fading
     if(fullSelected === false) {
