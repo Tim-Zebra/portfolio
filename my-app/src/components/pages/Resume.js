@@ -97,9 +97,14 @@ export default function Resume() {
   };
 
   // Display names for Headers
-  const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
-  const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
-
+  const defaultResumeSkillsHeaderTextLibraries = "Libraries/Runtimes:";
+  const spacedResumeSkillsHeaderTextLibraries = "Libraries/ Runtimes:";
+  const defaultResumeSkillsHeaderTextPackages = "Packages/Frameworks:";
+  const spacedResumeSkillsHeaderTextPackages = "Packages/ Frameworks:";
+  const defaultResumeSkillsHeaderTextDatabases = "Databases/ORM/Related:";
+  const spacedResumeSkillsHeaderTextDatabases= "Databases/ORM/ Related:";
+  // const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
+  // const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
   // Variables to handle style change with "useState"
   // header section
   const [ resumeStyle, setResumeStyle] = useState(noStyle);
@@ -128,8 +133,9 @@ export default function Resume() {
   // updates flex box for talent cards
   const [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
   // Updates the headings of the cards depending on screenwidth
-  const [ resumeSkillsHeaderText, setResumeSkillsHeaderText ] = useState(defaultResumeSkillsHeaderText);
-
+  const [ resumeSkillsHeaderTextLibraries, setResumeSkillsHeaderTextLibraries ] = useState(defaultResumeSkillsHeaderTextLibraries);
+  const [ resumeSkillsHeaderTextPackages, setResumeSkillsHeaderTextPackages] = useState(defaultResumeSkillsHeaderTextPackages);
+  const [ resumeSkillsHeaderTextDatabases, setResumeSkillsHeaderTextDatabases] = useState(defaultResumeSkillsHeaderTextDatabases);
   // listens for window change
   useEffect(() => {
     window.addEventListener("resize", updateFlexBox);
@@ -143,19 +149,34 @@ export default function Resume() {
     // +17 to adjust for some off set between window object and actual screen width
     const screenWidth = window.visualViewport.width+17;
     if(screenWidth >= 1800) {
-      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
       setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
+      setResumeSkillsHeaderTextLibraries(spacedResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
     } else if(screenWidth < 1800 && screenWidth >= 1400) {
       setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 mx-1");
-      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+      setResumeSkillsHeaderTextLibraries(defaultResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
     } else if (screenWidth < 1400 && screenWidth >= 1200) {
-      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+      setResumeSkillsHeaderTextLibraries(spacedResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
     } else if (screenWidth < 1200 && screenWidth >= 890) {
-      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+      setResumeSkillsHeaderTextLibraries(defaultResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(defaultResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
+      if (screenWidth < 1000) {
+        setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      }
     } else if (screenWidth < 890 && screenWidth >= 768) {
-      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+      setResumeSkillsHeaderTextLibraries(spacedResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
     } else if (screenWidth < 768) {
-      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+      setResumeSkillsHeaderTextLibraries(defaultResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(defaultResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(defaultResumeSkillsHeaderTextDatabases);
     }
   }
 
@@ -357,7 +378,7 @@ export default function Resume() {
         onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
         style={librariesRuntimesStyle}>
           <h4 className="resumeSkillsHeader">
-            {resumeSkillsHeaderText}
+            {resumeSkillsHeaderTextLibraries}
             <ul className="resumeSkillsList">
               <li>
                 <img style={frontEndTalentStyle} src={"images/badges/react.svg"} alt="react badge"></img>
@@ -407,7 +428,7 @@ export default function Resume() {
         onMouseLeave={() => {resumeStyleChangeInactive(); databasesORMRelatedInactive();}}
         style={databasesORMRelatedStyle}>
           <h4 className="resumeSkillsHeader">
-            Databases/ORM/ Related:
+            {resumeSkillsHeaderTextDatabases}
             <ul className="resumeSkillsList">
               <li>
                 <img style={backEndTalentStyle} src={"images/badges/mySQL.svg"} alt="mySQL badge"></img>
@@ -438,7 +459,7 @@ export default function Resume() {
         onMouseLeave={() => {resumeStyleChangeInactive(); packagesFrameworksInactive();}}
         style={packagesFrameworksStyle}>
           <h4 className="resumeSkillsHeader">
-            Packages/ Frameworks:
+            {resumeSkillsHeaderTextPackages}
             <ul className="resumeSkillsList">
               <li>
                 <img style={backEndTalentStyle} src={"images/badges/express.svg"} alt="express.js badge"></img>
