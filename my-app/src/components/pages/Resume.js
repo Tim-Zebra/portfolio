@@ -15,11 +15,11 @@ export default function Resume() {
     };
   })
   const updateFlexBox = () => {
-
     const screenWidth = window.visualViewport.width;
-    console.log('This happened', screenWidth);
-    if(screenWidth < 1800) {
-      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3");
+    if(screenWidth >= 1800) {
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
+    } else if(screenWidth < 1800) {
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-5");
     }
   }
   // Styles for resume
