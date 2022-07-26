@@ -6,22 +6,37 @@ export default function Resume() {
   // EXPIRIMENT :D 
   // Goal is to change flex boxes based on media width
   // Set base to adjust on flex box.
-  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-5"
-  let [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
+  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-12 col-lg-5";
+  const defaultResumeSkillsHeaderText = "Libraries/Runtimes:";
+  const spacedResumeSkillsHeaderText = "Libraries/ Runtimes:";
+  const [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
+  // Updates the headings of the cards depending on screenwidth
+  const [ resumeSkillsHeaderText, setResumeSkillsHeaderText ] = useState(defaultResumeSkillsHeaderText);
+
   useEffect(() => {
     window.addEventListener("resize", updateFlexBox);
     return () => {
       window.removeEventListener("resize", updateFlexBox);
     };
   })
+
+  // +17 to adjust for some off set between window object and actual screen width
   const updateFlexBox = () => {
-    const screenWidth = window.visualViewport.width;
+    const screenWidth = window.visualViewport.width+17;
     if(screenWidth >= 1800) {
+      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
       setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-2");
-    } else if(screenWidth < 1800) {
-      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 ml-2 my-2");
+    } else if(screenWidth < 1800 && screenWidth >= 1400) {
+      setFluidResumeProficiencies(baseResumeProficiencies + " col-xl-3 mx-1");
+      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
+    } else if (screenWidth < 1400 && screenWidth >= 1200) {
+      console.log('This happened', screenWidth);
+      setResumeSkillsHeaderText(spacedResumeSkillsHeaderText);
+    } else if (screenWidth < 1200) {
+      setResumeSkillsHeaderText(defaultResumeSkillsHeaderText);
     }
   }
+
   // Styles for resume
   // style reset
   const noStyle = {
@@ -330,7 +345,7 @@ export default function Resume() {
         onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
         style={librariesRuntimesStyle}>
           <h4 className="resumeSkillsHeader">
-            Libraries/ Runtimes:
+            {resumeSkillsHeaderText}
             <ul className="resumeSkillsList">
               <li>
                 <img style={frontEndTalentStyle} src={"images/badges/react.svg"} alt="react badge"></img>
