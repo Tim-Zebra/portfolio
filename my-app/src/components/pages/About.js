@@ -14,7 +14,6 @@ export default function About() {
     const position = window.scrollY;
     const screenWidth = window.screen.width;
     const screenHeight = window.screen.height;
-    console.log('This happened', position);
     changeParagraphBorderMobile(position, screenWidth, screenHeight);
 
   };

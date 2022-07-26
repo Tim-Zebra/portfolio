@@ -8,7 +8,15 @@ export default function Resume() {
   // Set base to adjust on flex box.
   const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-5"
   let [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
-  console.log('This happened', fluidResumeProficiencies);
+  useEffect(() => {
+    window.addEventListener("resize", updateFlexBox);
+    return () => {
+      window.removeEventListener("resize", updateFlexBox);
+    };
+  })
+  const updateFlexBox = () => {
+    
+  }
   // Styles for resume
   // style reset
   const noStyle = {
