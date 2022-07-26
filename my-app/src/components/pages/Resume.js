@@ -44,30 +44,52 @@ export default function Resume() {
   }
 
   // styles for subheaders
-  const defaultSubHeaderStyle = {
+  const defaultSubHeaderStyle = {};
 
-  }
   const frontSubHeaderFadeIn = {
     boxShadow: '0px 0px 80px 10px red',
     backgroundColor: 'rgba(255, 0, 0, 0.199)',
     height: '1px',
-  }
+  };
 
   const frontSubHeaderFadeOut = {
     transition: '0.8s',
     height: '1px',
-  }
+  };
+
+  const backSubHeaderFadeIn = {
+    boxShadow: '0px 0px 80px 10px red',
+    backgroundColor: 'rgba(255, 0, 0, 0.199)',
+    height: '1px',
+  };
+
+  const backSubHeaderFadeOut = {
+    transition: '0.8s',
+    height: '1px',
+  };
+
+  const fullSubHeaderFadeIn = {
+    boxShadow: '0px 0px 80px 10px red',
+    backgroundColor: 'rgba(255, 0, 0, 0.199)',
+    height: '1px',
+  };
+
+  const fullSubHeaderFadeOut = {
+    transition: '0.8s',
+    height: '1px',
+  };
 
   // styles for individual talents
   // default talent style assumes full-stack
   const defaultTalentStyle = {
     opacity: 1,
     transitionDuration: '1s',
-  }
+  };
+
   const fadeTalentStyle = {
     opacity: 0.2,
     transitionDuration: '1s',
-  }
+  };
 
   // Variables to handle style change
   // header section
@@ -114,11 +136,12 @@ export default function Resume() {
   // modularized buttons
   // Handles front button pressed
   const handleFrontSelection = () => {
+    // Fade effect on click
     setFrontSubHeaderStyle(frontSubHeaderFadeIn);
     const timer = setTimeout(() => {
       setFrontSubHeaderStyle(frontSubHeaderFadeOut);
     }, 1);
-    
+
     // Affects talents styling/fading
     if(frontSelected === false) {
       setFrontSelected(true);
@@ -136,6 +159,13 @@ export default function Resume() {
 
   // Handles back button pressed
   const handleBackSelection = () => {
+    // Fade effect on click
+    setBackSubHeaderStyle(backSubHeaderFadeIn);
+    const timer = setTimeout(() => {
+      setBackSubHeaderStyle(backSubHeaderFadeOut);
+    }, 1);
+
+    // Affects talents styling/fading
     if(backSelected === false) {
       setBackSelected(true);
       setBackEndTalentStyle(defaultTalentStyle);
@@ -152,6 +182,13 @@ export default function Resume() {
 
   // Handles full button pressed
   const handleFullSelection = () => {
+    // Fade effect on click
+    setFullSubHeaderStyle(fullSubHeaderFadeIn);
+    const timer = setTimeout(() => {
+      setFullSubHeaderStyle(fullSubHeaderFadeOut);
+    }, 1);
+
+    // Affects talents styling/fading
     if(fullSelected === false) {
       setFrontEndTalentStyle(defaultTalentStyle);
       setBackEndTalentStyle(defaultTalentStyle);
