@@ -3,6 +3,12 @@ import "../../styles/Resume.css";
 import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
+  // EXPIRIMENT :D 
+  // Goal is to change flex boxes based on media width
+  // Set base to adjust on flex box.
+  const baseResumeProficiencies = "d-flex justify-content-around resumeProficiencies col-12 col-sm-5"
+  let [ fluidResumeProficiencies, setFluidResumeProficiencies ] = useState(baseResumeProficiencies + " col-xl-2");
+  console.log('This happened', fluidResumeProficiencies);
   // Styles for resume
   // style reset
   const noStyle = {
@@ -277,41 +283,41 @@ export default function Resume() {
         <h2 className='col-4'
           style={frontSubHeaderStyle}
         >
-          <text className='resumeTalentOption'
+          <div className='resumeTalentOption'
             onClick={() => {handleTalentSelection('front');}}
             style={frontEndButtonStyle}
           >
             <span style={frontWordStyle}>Front</span>-End Talents
-          </text>
+          </div>
         </h2>
         <h2 className='col-4 resumeTalentFrame'
           style={fullSubHeaderStyle}
         >
-          <text className='resumeTalentOption'
+          <div className='resumeTalentOption'
             onClick={() => {handleTalentSelection('full');}}
             style={fullStackButtonStyle}
           >
             <span style={fullWordStyle}>Full</span>-Stack Talents
-          </text>
+          </div>
         </h2>
         <h2 className='col-4'
           style={backSubHeaderStyle}
         >
-          <text className='resumeTalentOption'
+          <div className='resumeTalentOption'
             style={backEndButtonStyle}
             onClick={() => {handleTalentSelection('back'); frontSubHeaderFade();}}
           >
             <span style={backWordStyle}>Back</span>-End Talents
-          </text>
+          </div>
         </h2>
       </div>
       <div id="resumeBlock" className="d-flex row justify-content-around col-12 text-center">
-        <div id="resumeLibrariesRuntimes" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        <div id="resumeLibrariesRuntimes" className={fluidResumeProficiencies}
         onMouseEnter={() => {resumeStyleChangeActive(); librariesRuntimesActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); librariesRuntimesInactive();}}
         style={librariesRuntimesStyle}>
           <h4 className="resumeSkillsHeader">
-            Libraries/Runtimes:
+            Libraries/ Runtimes:
             <ul className="resumeSkillsList">
               <li>
                 <img style={frontEndTalentStyle} src={"images/badges/react.svg"} alt="react badge"></img>
@@ -328,7 +334,7 @@ export default function Resume() {
             </ul>
           </h4>
         </div>
-        <div id="resumeLanguages" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        <div id="resumeLanguages" className={fluidResumeProficiencies}
         onMouseEnter={() => {resumeStyleChangeActive(); languagesActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); languagesInactive();}}
         style={languagesStyle}>
@@ -356,7 +362,7 @@ export default function Resume() {
             </ul>
           </h4>
         </div>
-        <div id="resumeDatabasesORMRelated" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        <div id="resumeDatabasesORMRelated" className={fluidResumeProficiencies}
         onMouseEnter={() => {resumeStyleChangeActive(); databasesORMRelatedActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); databasesORMRelatedInactive();}}
         style={databasesORMRelatedStyle}>
@@ -387,7 +393,7 @@ export default function Resume() {
             </ul>
           </h4>
         </div>
-        <div id="resumePackagesFrameworks" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        <div id="resumePackagesFrameworks" className={fluidResumeProficiencies}
         onMouseEnter={() => {resumeStyleChangeActive(); packagesFrameworksActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); packagesFrameworksInactive();}}
         style={packagesFrameworksStyle}>
@@ -415,7 +421,7 @@ export default function Resume() {
             </ul>
           </h4>
         </div>
-        <div id="resumeApplications" className="d-flex justify-content-around col-12 col-md-2 resumeProficiencies"
+        <div id="resumeApplications" className={fluidResumeProficiencies}
         onMouseEnter={() => {resumeStyleChangeActive(); applicationsActive();}}
         onMouseLeave={() => {resumeStyleChangeInactive(); applicationsInactive();}}
         style={applicationsStyle}>

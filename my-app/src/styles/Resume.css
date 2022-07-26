@@ -18,6 +18,7 @@
 }
 
 .resumeTalentOption {
+  font-size: 35px;
   background-color: transparent;
   cursor: pointer;
   padding: 2%;
@@ -38,11 +39,11 @@
 .resumeProficiencies {
   border: black solid 4px;
   border-bottom: none;
-  border-radius: 1% 1% 5% 5%
+  border-radius: 1% 1% 5% 5%;
 }
 
 .resumeSkillsHeader {
-  font-size: 40px;
+  font-size: 37px;
   margin: 5%;
 }
 
@@ -68,9 +69,44 @@
   font-size: 5px;
 }
 
+/* Large sized monitors */
+@media only screen and (min-width: 2020px) {
+  #footer {
+    margin-top: 7%;
+  }
+}
+
+@media only screen and (max-width: 1960px) {
+  .resumeSkillsHeader {
+    font-size: 32px;
+  }
+  #footer {
+    margin-top: 12%;
+  }
+}
+@media only screen and (max-width: 1800px) {
+  .resumeProficiencies {
+    margin: 1.75%;
+  }
+
+  .resumeSkillsHeader {
+
+  }
+
+  #resumeBlock {
+    margin-bottom: 2%;
+  }
+
+  #footer {
+    margin-top: 0%;
+  }
+}
 /* Medium sized monitors */
 @media only screen and (max-width: 1200px) {
-
+  .resumeProficiencies {
+    margin: 0%;
+    margin-bottom: 4%;
+  }
 }
 
 /* Laptop screens */
