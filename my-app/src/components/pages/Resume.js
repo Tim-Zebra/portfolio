@@ -138,6 +138,7 @@ export default function Resume() {
   const [ resumeSkillsHeaderTextDatabases, setResumeSkillsHeaderTextDatabases] = useState(defaultResumeSkillsHeaderTextDatabases);
   // listens for window change
   useEffect(() => {
+    updateFlexBox();
     window.addEventListener("resize", updateFlexBox);
     return () => {
       window.removeEventListener("resize", updateFlexBox);
@@ -173,10 +174,14 @@ export default function Resume() {
       setResumeSkillsHeaderTextLibraries(spacedResumeSkillsHeaderTextLibraries);
       setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
       setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
-    } else if (screenWidth < 768) {
+    } else if (screenWidth < 768 && screenWidth >= 500) {
       setResumeSkillsHeaderTextLibraries(defaultResumeSkillsHeaderTextLibraries);
       setResumeSkillsHeaderTextPackages(defaultResumeSkillsHeaderTextPackages);
       setResumeSkillsHeaderTextDatabases(defaultResumeSkillsHeaderTextDatabases);
+    }  else if (screenWidth < 500) {
+      setResumeSkillsHeaderTextLibraries(spacedResumeSkillsHeaderTextLibraries);
+      setResumeSkillsHeaderTextPackages(spacedResumeSkillsHeaderTextPackages);
+      setResumeSkillsHeaderTextDatabases(spacedResumeSkillsHeaderTextDatabases);
     }
   }
 

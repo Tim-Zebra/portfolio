@@ -155,5 +155,7 @@
 
 /* Phone/Mobile */
 @media only screen and (max-width: 450px) {
-
+  .resumeSkillsHeader {
+    font-size: 30px;
+  }
 }
