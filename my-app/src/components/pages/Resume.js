@@ -96,6 +96,20 @@ export default function Resume() {
     transitionDuration: '1s',
   };
 
+  // Mobile
+  // fade variables
+  const mobilePartialOpac = {
+    opacity: '0.1',
+    transitionDuration: '1s',
+  };
+  const mobileHalfOpac = {
+    opacity: '0.4',
+    transitionDuration: '1s',
+  };
+  const mobileFullOpac = {
+    opacity: '0',
+    transitionDuration: '1s',
+  };
   // Display names for Headers
   const defaultResumeSkillsHeaderTextLibraries = "Libraries/Runtimes:";
   const spacedResumeSkillsHeaderTextLibraries = "Libraries/ Runtimes:";
@@ -361,7 +375,6 @@ export default function Resume() {
 
   // Mobile Style Change
   // Fade on scroll
-  // Logic from Scroll position
   const handleMobileScroll = () => {
     const screenWidth = window.screen.width;
     // Filters for a mobile or hand held display
@@ -374,62 +387,129 @@ export default function Resume() {
   };
 
   const changeTalentSectionMobile = (positionY, screenHeight) => {
-    // Filters for longer phones like Galaxy S20 Ultra
-    if(screenHeight > 677) {
-      if(positionY <= 51) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 496) {
-        setParagraph1('red');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 907) {
-        setParagraph1('black');
-        setParagraph2('deepskyblue');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 1436) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('limegreen');
-        setParagraph4('black');
+    // Filters for short phones where view of Talents is majority
+    if (screenHeight <= 677) {
+      console.log('This happened', positionY);
+      if(positionY <= 105) {
+        setLibrariesRuntimesStyle(noStyle);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      } else if (positionY <= 274) {
+        setLibrariesRuntimesStyle(noStyle);
+        setLanguagesStyle(mobilePartialOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      } else if (positionY <= 324) {
+        setLibrariesRuntimesStyle(noStyle);
+        setLanguagesStyle(mobileHalfOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }  else if (positionY <= 476) {
+        setLibrariesRuntimesStyle(mobileHalfOpac);
+        setLanguagesStyle(mobileHalfOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }  else if (positionY <= 493) {
+        setLibrariesRuntimesStyle(mobilePartialOpac);
+        setLanguagesStyle(noStyle);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      } else if (positionY <= 675) {
+        setLibrariesRuntimesStyle(mobilePartialOpac);
+        setLanguagesStyle(noStyle);
+        setDatabasesORMRelatedStyle(mobilePartialOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      } else if (positionY <= 710) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(noStyle);
+        setDatabasesORMRelatedStyle(mobileHalfOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      } else if (positionY <= 934) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileHalfOpac);
+        setDatabasesORMRelatedStyle(mobileHalfOpac);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }  else if (positionY <= 941) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobilePartialOpac);
+        setDatabasesORMRelatedStyle(noStyle);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }  else if (positionY <= 987) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobilePartialOpac);
+        setDatabasesORMRelatedStyle(noStyle);
+        setPackagesFrameworksStyle(mobileFullOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }   else if (positionY <= 1068) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(noStyle);
+        setPackagesFrameworksStyle(mobilePartialOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }   else if (positionY <= 1166) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(noStyle);
+        setPackagesFrameworksStyle(mobileHalfOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }   else if (positionY <= 1300) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobileHalfOpac);
+        setPackagesFrameworksStyle(mobileHalfOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }   else if (positionY <= 1312) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobilePartialOpac);
+        setPackagesFrameworksStyle(mobileHalfOpac);
+        setApplicationsStyle(mobileFullOpac);
+      }   else if (positionY <= 1340) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobilePartialOpac);
+        setPackagesFrameworksStyle(noStyle);
+        setApplicationsStyle(mobileFullOpac);
+      }      else if (positionY <= 1385) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobilePartialOpac);
+        setPackagesFrameworksStyle(noStyle);
+        setApplicationsStyle(mobilePartialOpac);
+      }    else if (positionY <= 1480) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobilePartialOpac);
+        setPackagesFrameworksStyle(noStyle);
+        setApplicationsStyle(mobileHalfOpac);
+      }    else if (positionY <= 1511) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(noStyle);
+        setApplicationsStyle(mobileHalfOpac);
+      }    else if (positionY <= 1589) {
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobileHalfOpac);
+        setApplicationsStyle(noStyle);
       } else {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('gold');
-      }
-    } 
-    // Filters for more standard phones like iPhone SE
-    else {
-      if(positionY <= 60) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 686) {
-        setParagraph1('red');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 1256) {
-        setParagraph1('black');
-        setParagraph2('deepskyblue');
-        setParagraph3('black');
-        setParagraph4('black');
-      } else if(positionY <= 1628) {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('limegreen');
-        setParagraph4('black');
-      } else {
-        setParagraph1('black');
-        setParagraph2('black');
-        setParagraph3('black');
-        setParagraph4('gold');
+        setLibrariesRuntimesStyle(mobileFullOpac);
+        setLanguagesStyle(mobileFullOpac);
+        setDatabasesORMRelatedStyle(mobileFullOpac);
+        setPackagesFrameworksStyle(mobilePartialOpac);
+        setApplicationsStyle(noStyle);
       }
     }
   };
