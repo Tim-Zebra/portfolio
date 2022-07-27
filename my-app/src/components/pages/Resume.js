@@ -144,6 +144,14 @@ export default function Resume() {
       window.removeEventListener("resize", updateFlexBox);
     };
   })
+  // listens for window scroll
+  useEffect(() => {
+    
+    window.addEventListener("scroll", handleMobileScroll);
+    return () => {
+      window.removeEventListener("scroll", handleMobileScroll);
+    };
+  })
 
   // updates display
   const updateFlexBox = () => {
@@ -350,6 +358,81 @@ export default function Resume() {
   const applicationsInactive = () => {
     setApplicationsStyle(noStyle);
   }
+
+  // Mobile Style Change
+  // Fade on scroll
+  // Logic from Scroll position
+  const handleMobileScroll = () => {
+    const screenWidth = window.screen.width;
+    // Filters for a mobile or hand held display
+    if(screenWidth < 450) {
+      const position = window.scrollY;
+      const screenHeight = window.screen.height;
+      changeTalentSectionMobile(position, screenHeight);
+    }
+
+  };
+
+  const changeTalentSectionMobile = (positionY, screenHeight) => {
+    // Filters for longer phones like Galaxy S20 Ultra
+    if(screenHeight > 677) {
+      if(positionY <= 51) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 496) {
+        setParagraph1('red');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 907) {
+        setParagraph1('black');
+        setParagraph2('deepskyblue');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 1436) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('limegreen');
+        setParagraph4('black');
+      } else {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('gold');
+      }
+    } 
+    // Filters for more standard phones like iPhone SE
+    else {
+      if(positionY <= 60) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 686) {
+        setParagraph1('red');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 1256) {
+        setParagraph1('black');
+        setParagraph2('deepskyblue');
+        setParagraph3('black');
+        setParagraph4('black');
+      } else if(positionY <= 1628) {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('limegreen');
+        setParagraph4('black');
+      } else {
+        setParagraph1('black');
+        setParagraph2('black');
+        setParagraph3('black');
+        setParagraph4('gold');
+      }
+    }
+  };
 
   return (
     <section className="portfolioSection">
