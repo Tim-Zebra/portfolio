@@ -383,7 +383,6 @@ export default function Resume() {
       const screenHeight = window.screen.height;
       changeTalentSectionMobile(position, screenHeight);
     }
-
   };
 
   const changeTalentSectionMobile = (positionY, screenHeight) => {
