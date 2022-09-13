@@ -28,7 +28,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('Resume')}
           className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
         >
-          Skills
+          Talents
         </a>
       </li>
     </ul>
