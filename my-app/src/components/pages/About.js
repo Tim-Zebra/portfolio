@@ -187,7 +187,7 @@ export default function About() {
           I have always loved putting together puzzles, recognizing patterns, and applying unique yet crafted solutions towards a particular challenge.
           It is like "getting payed to play games", and I love it!
           For more about me,
-          be sure to send me a connection request on <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub</a>
+          be sure to send me a connection request on <a href="https://www.linkedin.com/in/timzalewski/" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/Tim-Zebra" className="sectionParagraphLinks" target="_blank" rel="noopener noreferrer">GitHub </a>
           to see where I started, who I am, and how far I have come in such a short amount of time.
         </p>
       </div>
