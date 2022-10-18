@@ -17,17 +17,6 @@ import '../styles/Footer.css';
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
 
-  // Displays current page
-  const renderSectionPage = () => {
-    if (currentPage === 'About') {
-      return <About />;
-    }
-    if (currentPage === 'Portfolio') {
-      return <Portfolio />;
-    }
-    return <Resume />;
-  };
-
   const handlePageChange = (page) => setCurrentPage(page);
   return (
       <div className="portContainer">
