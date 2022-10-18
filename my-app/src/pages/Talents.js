@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import "../../styles/Resume.css";
-import pdf from '../../assets/resume.pdf';
+import "../styles/Talents.css";
+import pdf from '../assets/resume.pdf';
 
-export default function Resume() {
+export default function Talents() {
   // Styles and constants for useStates
   // style reset
   const noStyle = {

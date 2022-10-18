@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project from './portfolio/Project';
 import ProjectAbout from './portfolio/ProjectAbout';
-import '../../styles/Portfolio.css'
+import '../styles/Portfolio.css'
 import { projectObj } from './portfolio/projectInfo';
 
 // Specified project values are passed to the Project component

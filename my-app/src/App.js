@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavTabs from './navigation/NavTabs';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
+import Talents from './pages/Talents';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -15,7 +15,7 @@ import '../styles/Footer.css';
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('About');
+  const [currentPage, setCurrentPage] = useState('Home');
 
   // Displays current page
   const renderSectionPage = () => {
@@ -30,16 +30,40 @@ function App() {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <Routes>
       <div className="portContainer">
         <header>
           <Header />
           <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
         </header>
-        {renderSectionPage()}
+        {/* Main Content to Display */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About />
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <Portfolio />
+            }
+          />
+          <Route
+            path="/talents"
+            element={
+              <Talents />
+            }
+          />
+          </Routes>
         <Footer />
       </div>
-    </Routes>
   );
 }
 
