@@ -1,5 +1,5 @@
 import React, {useState, useEffect,  } from 'react';
-import "../../../styles/ProjectAbout.css"
+import "../../styles/ProjectAbout.css"
 
 
 export default function ProjectAbout({currentProject, handleReset}) {
