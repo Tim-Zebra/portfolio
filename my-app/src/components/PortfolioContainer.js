@@ -5,7 +5,7 @@ import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Header from './Header';
 import Footer from './Footer';
-// Commit before ruining all logic lol
+
 // CSS imports
 import '../styles/bootstrap.min.css'
 import '../styles/PortfolioContainer.css';
