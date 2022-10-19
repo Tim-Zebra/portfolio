@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import "../styles/Talents.css";
-import { Document, Page } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
-const pdf = '../../assets/resume.pdf';
-// import pdf from '../assets/resume.pdf';
+// const pdf = '../assets/resume.pdf';
+import pdf from '../assets/resume.pdf';
 export default function Resume() {
 
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
+  const redirect_Page = () => {
+    let tID = setTimeout(function () {
+        window.location.href = 
+        {pdf}; //replace with your url
+        window.clearTimeout(tID);// clear time out.
+    }, 1000);
   };
 
-  return (
-    <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-      <Page pageNumber={pageNumber} />
-    </Document>
-  );
+  redirect_Page();
 };
