@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/Talents.css";
 import pdf from '../assets/resume.pdf';
+import { Link } from 'react-router-dom'
 
 export default function Talents() {
   // Styles and constants for useStates
@@ -517,7 +518,7 @@ export default function Talents() {
     <section className="portfolioSection">
       <div id="resumeHeading" className="d-block text-center">
         <h1>Resume</h1>
-        <div id="resumeDownloadDiv">Download my Resume <a href={pdf} target="_blank" rel="noreferrer" id="resumeLink" style={resumeStyle}>Here</a></div>
+        <div id="resumeDownloadDiv">Download my Resume <Link to="/resume" id="resumeLink" style={resumeStyle}>Here</Link></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
         <h2 className='col-12 col-sm-4'

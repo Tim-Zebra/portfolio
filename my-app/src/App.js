@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Talents from './pages/Talents';
+import Resume from './pages/Resume';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -46,6 +47,12 @@ function App() {
             path="/talents"
             element={
               <Talents />
+            }
+          />
+          <Route
+            path="/resume"
+            element={
+              <Resume />
             }
           />
           </Routes>
