@@ -23,7 +23,7 @@ export default function Footer() {
     <footer id="footer">
       <IconCreator activeIconObj={iconLinkObj.github} />
       <IconCreator activeIconObj={iconLinkObj.linkedin} />
-      <IconCreator activeIconObj={iconLinkObj.stackoverflow} />
+      {/* <IconCreator activeIconObj={iconLinkObj.stackoverflow} /> */}
     </footer>
   );
 }
