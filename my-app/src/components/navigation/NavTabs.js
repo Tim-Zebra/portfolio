@@ -1,44 +1,48 @@
-import React from 'react';
+import { useState } from 'react';
+import { Link, useLocation  } from 'react-router-dom';
 
 // Navbar that highlights which link is active
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs() {
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = useState(location.pathname.slice(1));
+  
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-        <a
-          href="/"
-          onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+        <Link
+          to="/"
+          onClick={() => setCurrentPage('home')}
+          className={currentPage === 'home' ? 'nav-link active' : 'nav-link'}
         >
           Home
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="/about"
-          onClick={() => handlePageChange('About')}
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+        <Link
+          to="/about"
+          onClick={() => setCurrentPage('about')}
+          className={currentPage === 'about' ? 'nav-link active' : 'nav-link'}
         >
           About
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="/portfolio"
-          onClick={() => handlePageChange('Portfolio')}
-          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+        <Link
+          to="/portfolio"
+          onClick={() => setCurrentPage('portfolio')}
+          className={currentPage === 'portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="/talents"
-          onClick={() => handlePageChange('Talents')}
-          className={currentPage === 'Talents' ? 'nav-link active' : 'nav-link'}
+        <Link
+          to="/talents"
+          onClick={() => setCurrentPage('talents')}
+          className={currentPage === 'talents' ? 'nav-link active' : 'nav-link'}
         >
           Talents
-        </a>
+        </Link>
       </li>
     </ul>
   );

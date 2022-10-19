@@ -15,16 +15,12 @@ import './styles/Header.css';
 import './styles/Section.css';
 import './styles/Footer.css';
 
-
 function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
-
-  const handlePageChange = (page) => setCurrentPage(page);
-  return (
+    return (
       <div className="portContainer">
         <header>
           <Header />
-          <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+          <NavTabs />
         </header>
         {/* Main Content to Display */}
         <Routes>
