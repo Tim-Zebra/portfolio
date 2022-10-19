@@ -517,8 +517,9 @@ export default function Talents() {
   return (
     <section className="portfolioSection">
       <div id="resumeHeading" className="d-block text-center">
-        <h1>Resume</h1>
-        <div id="resumeDownloadDiv">Download my Resume <a href={pdf} id="resumeLink" style={resumeStyle} download>Here</a></div>
+        <h1>Talents</h1>
+        {/* <div id="resumeDownloadDiv">Download my Resume <a href={pdf} id="resumeLink" style={resumeStyle} download="T.Zalewski_Full-Stack_Resume">Here</a></div> */}
+        <div id="resumeDownloadDiv">Download my Resume <Link to='/resume' id="resumeLink" style={resumeStyle}>Here</Link></div>
       </div>
       <div id="resumeSubHeadingTalents" className="d-flex justify-content-around text-center">
         <h2 className='col-12 col-sm-4'
