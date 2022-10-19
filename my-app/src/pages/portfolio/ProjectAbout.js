@@ -89,9 +89,9 @@ export default function ProjectAbout({currentProject, handleReset}) {
               <a href={currentProject.deployed} target="_blank" rel="noreferrer" className="text-center" id="projectDeployedAt">Check it Out!</a>
             }
             {currentProject.deployed === false &&
-              <a className='text-center' id="projectNotDeployed">
+              <div className='text-center' id="projectNotDeployed">
                 Local Project
-              </a>
+              </div>
             }
             <a href={currentProject.github} target="_blank" rel="noreferrer" className="text-center" id="projectGitHubLink">
               GitHub Repo
