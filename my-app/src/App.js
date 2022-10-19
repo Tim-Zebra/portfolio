@@ -1,17 +1,19 @@
+import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import NavTabs from './navigation/NavTabs';
+import NavTabs from './components/navigation/NavTabs'
+import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Talents from './pages/Talents';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // CSS imports
-import '../styles/bootstrap.min.css'
-import '../styles/PortfolioContainer.css';
-import '../styles/Header.css';
-import '../styles/Section.css';
-import '../styles/Footer.css';
+import './styles/bootstrap.min.css'
+import './styles/PortfolioContainer.css';
+import './styles/Header.css';
+import './styles/Section.css';
+import './styles/Footer.css';
 
 
 function App() {

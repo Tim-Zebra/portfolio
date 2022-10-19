@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import IconCreator from '../../../utils/IconCreator'
+import IconCreator from '../../utils/IconCreator'
 import "../../styles/Project.css"
 
 export default function Project({projectNum, currentProject, selectedStatus, handleSelection, firstLanding}) {
