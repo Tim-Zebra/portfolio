@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import "../styles/Resume.css";
+
 import pdf from '../assets/resume.pdf';
 import bCard from '../assets/bCard.pdf';
 
