@@ -19,7 +19,7 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
-          to="/about"
+          to="/portfolio/about"
           onClick={() => setCurrentPage('about')}
           className={currentPage === 'about' ? 'nav-link active' : 'nav-link'}
         >
@@ -28,7 +28,7 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
-          to="/projects"
+          to="/portfolio/projects"
           onClick={() => setCurrentPage('projects')}
           className={currentPage === 'projects' ? 'nav-link active' : 'nav-link'}
         >
@@ -37,7 +37,7 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
-          to="/talents"
+          to="/portfolio/talents"
           onClick={() => setCurrentPage('talents')}
           className={currentPage === 'talents' ? 'nav-link active' : 'nav-link'}
         >

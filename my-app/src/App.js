@@ -32,25 +32,25 @@ function App() {
             }
           />
           <Route
-            path="/about"
+            path="/portfolio/about"
             element={
               <About />
             }
           />
           <Route
-            path="/projects"
+            path="/portfolio/projects"
             element={
               <Portfolio />
             }
           />
           <Route
-            path="/talents"
+            path="/portfolio/talents"
             element={
               <Talents />
             }
           />
           <Route
-            path="/resume"
+            path="/portfolio/resume"
             element={
               <Resume />
             }
