@@ -26,7 +26,7 @@ function App() {
         {/* Main Content to Display */}
         <Routes>
           <Route
-            path="/"
+            path="/portfolio"
             element={
               <Home />
             }
@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="/portfolio"
+            path="/Portfolio"
             element={
               <Portfolio />
             }
