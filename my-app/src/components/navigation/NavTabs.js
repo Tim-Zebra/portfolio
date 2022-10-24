@@ -11,8 +11,8 @@ function NavTabs() {
       <li className="nav-item">
         <Link
           to="/"
-          onClick={() => setCurrentPage('home')}
-          className={currentPage === 'home' ? 'nav-link active' : 'nav-link'}
+          onClick={() => setCurrentPage('')}
+          className={currentPage === '' ? 'nav-link active' : 'nav-link'}
         >
           Home
         </Link>

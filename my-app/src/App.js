@@ -38,19 +38,19 @@ function App() {
             }
           />
           <Route
-            path="/portfolio/#/projects"
+            path="/projects"
             element={
               <Portfolio />
             }
           />
           <Route
-            path="/portfolio/#/talents"
+            path="/talents"
             element={
               <Talents />
             }
           />
           <Route
-            path="/portfolio/#/resume"
+            path="/resume"
             element={
               <Resume />
             }
