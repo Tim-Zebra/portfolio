@@ -32,7 +32,7 @@ function NavTabs() {
           onClick={() => setCurrentPage('projects')}
           className={currentPage === 'projects' ? 'nav-link active' : 'nav-link'}
         >
-          Portfolio
+          Projects
         </Link>
       </li>
       <li className="nav-item">
@@ -41,7 +41,7 @@ function NavTabs() {
           onClick={() => setCurrentPage('talents')}
           className={currentPage === 'talents' ? 'nav-link active' : 'nav-link'}
         >
-          Talents
+          Talents/Resume
         </Link>
       </li>
     </ul>
