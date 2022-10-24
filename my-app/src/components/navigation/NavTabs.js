@@ -10,7 +10,7 @@ function NavTabs() {
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link
-          to="/"
+          to="/portfolio"
           onClick={() => setCurrentPage('home')}
           className={currentPage === 'home' ? 'nav-link active' : 'nav-link'}
         >
@@ -28,7 +28,7 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
-          to="/portfolio"
+          to="/Portfolio"
           onClick={() => setCurrentPage('portfolio')}
           className={currentPage === 'portfolio' ? 'nav-link active' : 'nav-link'}
         >
