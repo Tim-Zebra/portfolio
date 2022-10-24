@@ -28,9 +28,9 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
-          to="/Portfolio"
-          onClick={() => setCurrentPage('portfolio')}
-          className={currentPage === 'portfolio' ? 'nav-link active' : 'nav-link'}
+          to="/projects"
+          onClick={() => setCurrentPage('projects')}
+          className={currentPage === 'projects' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
         </Link>

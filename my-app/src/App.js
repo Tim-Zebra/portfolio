@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="/Portfolio"
+            path="/projects"
             element={
               <Portfolio />
             }
