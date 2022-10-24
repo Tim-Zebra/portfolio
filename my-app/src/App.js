@@ -26,7 +26,7 @@ function App() {
         {/* Main Content to Display */}
         <Routes>
           <Route
-            path="/portfolio"
+            path="/"
             element={
               <Home />
             }
