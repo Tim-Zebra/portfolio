@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.8a0fb7e6.css",
-    "main.js": "/portfolio/static/js/main.f9c3f3e4.js",
+    "main.js": "/portfolio/static/js/main.87995403.js",
     "static/media/resume.pdf": "/portfolio/static/media/resume.3057f98b36f84f139f15.pdf",
     "static/media/bCard.pdf": "/portfolio/static/media/bCard.dac278cc28d0559873de.pdf",
     "static/media/headerCode.gif": "/portfolio/static/media/headerCode.27c7670803406dcf35a3.gif",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.8a0fb7e6.css",
-    "static/js/main.f9c3f3e4.js"
+    "static/js/main.87995403.js"
   ]
 }
