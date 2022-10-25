@@ -6,7 +6,16 @@ export default function Portfolio() {
   return (
     <section className="portfolioSection">
       <p>
-        tim's home page. In progress...
+        Welcome to Tim's portfolio! The entire portfolio is under renovation. Also, the portfolio is being used as a way to implement, learn, refine, and apply coding concepts and tools.
+      </p>
+      <p>
+        R&D - new routing. Updating from BrowserRouter to HashRouter. ~80% complete.
+      </p>
+      <p>
+        Refractored file organization and syntax.
+      </p>
+      <p>
+        Implemented a one stop shop page containing resume and business information. Problem addressed: needed a static link to share resume/business card that does not change when the documents are updated.
       </p>
     </section>
   );
