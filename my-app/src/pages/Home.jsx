@@ -1,5 +1,5 @@
 import '../styles/Portfolio.css'
-
+import '../styles/Home.css'
 // Specified project values are passed to the Project component
 export default function Portfolio() {
 
