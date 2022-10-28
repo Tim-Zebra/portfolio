@@ -17,6 +17,9 @@ export default function Portfolio() {
       <p>
         Implemented a one stop shop page containing resume and business information. Problem addressed: needed a static link to share resume/business card that does not change when the documents are updated.
       </p>
+      <p>
+        Add Top 2 Projects, Add accolades
+      </p>
     </section>
   );
 }
